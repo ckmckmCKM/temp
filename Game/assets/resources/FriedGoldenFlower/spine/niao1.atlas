@@ -1,0 +1,13 @@
+
+niao1.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bird1
+  rotate: false
+  xy: 2, 2
+  size: 107, 99
+  orig: 107, 99
+  offset: 0, 0
+  index: -1

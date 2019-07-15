@@ -1,0 +1,265 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "openCard",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.0333333333333334,
+  "sample": 30,
+  "speed": 0.5,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "58b71876-227c-48a3-8b2a-a0ba06015b36"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "04e94648-7f9c-44f9-944d-4604b881aaf8"
+            }
+          },
+          {
+            "frame": 0.2,
+            "value": {
+              "__uuid__": "6ba0b7b3-3129-4f9d-a44b-3bbb42d828fe"
+            }
+          },
+          {
+            "frame": 0.23333333333333334,
+            "value": {
+              "__uuid__": "17a3d6f9-70dc-40dc-b9cd-923a68e6f908"
+            }
+          },
+          {
+            "frame": 0.26666666666666666,
+            "value": {
+              "__uuid__": "1423dd26-e452-498a-98dd-b3098e840198"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "ad17ff8e-6366-49a1-840a-22dd3d81d4a4"
+            }
+          },
+          {
+            "frame": 0.36666666666666664,
+            "value": {
+              "__uuid__": "a5fe67b2-98da-4227-b80d-8518a785e87c"
+            }
+          },
+          {
+            "frame": 0.4,
+            "value": {
+              "__uuid__": "06a9fc23-393e-4ac7-8762-fbcd15efb9dd"
+            }
+          },
+          {
+            "frame": 0.43333333333333335,
+            "value": {
+              "__uuid__": "72d5aead-4244-48bf-bb87-faf1127b94fe"
+            }
+          },
+          {
+            "frame": 0.4666666666666667,
+            "value": {
+              "__uuid__": "908783e5-5afe-4f24-bf2a-e02aa5412a7d"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "76b0ee53-07b5-4bde-8fef-4f3ca43262e9"
+            }
+          },
+          {
+            "frame": 0.5333333333333333,
+            "value": {
+              "__uuid__": "fab992c6-9ad3-4080-8a75-adbc6b217ecb"
+            }
+          },
+          {
+            "frame": 0.5666666666666667,
+            "value": {
+              "__uuid__": "9fb4f72b-1a2a-464d-8e7c-382822a0c4a0"
+            }
+          },
+          {
+            "frame": 0.6,
+            "value": {
+              "__uuid__": "b5ee9d84-99c8-423b-9f86-2321bd05f5f7"
+            }
+          },
+          {
+            "frame": 0.6333333333333333,
+            "value": {
+              "__uuid__": "7d44c9ac-4e75-4e09-97e5-28eebcdf3483"
+            }
+          },
+          {
+            "frame": 0.7,
+            "value": {
+              "__uuid__": "99739e55-6605-485e-ba43-20c470fc026b"
+            }
+          },
+          {
+            "frame": 0.7333333333333333,
+            "value": {
+              "__uuid__": "f3b22928-eff8-4a58-b83f-c610cd7a58b0"
+            }
+          },
+          {
+            "frame": 0.7666666666666667,
+            "value": {
+              "__uuid__": "ec73b4b4-e4b9-4e55-a94a-380944216b5f"
+            }
+          },
+          {
+            "frame": 0.8,
+            "value": {
+              "__uuid__": "f7e75dc7-e328-4442-aba1-2a2960de44b5"
+            }
+          },
+          {
+            "frame": 0.8333333333333334,
+            "value": {
+              "__uuid__": "375a947b-1752-46ab-ad07-120c321c5ca0"
+            }
+          },
+          {
+            "frame": 0.8666666666666667,
+            "value": {
+              "__uuid__": "414ca87a-e0f3-4ea8-ac8e-00116187fb31"
+            }
+          },
+          {
+            "frame": 0.9,
+            "value": {
+              "__uuid__": "6cba8aca-6132-4e44-814e-36fb6b72df9c"
+            }
+          },
+          {
+            "frame": 0.9333333333333333,
+            "value": {
+              "__uuid__": "de700076-2d94-4f84-b9b3-2ac5a5795aa0"
+            }
+          },
+          {
+            "frame": 0.9666666666666667,
+            "value": {
+              "__uuid__": "27510097-5cc1-4a3c-8526-e48bc17b4ac6"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "f3af69df-e25b-4486-8740-4c5bf3d5c8b9"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "frame": 0.9666666666666667,
+      "func": "kai1111jiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    },
+    {
+      "frame": 1.0333333333333334,
+      "func": "kaijiang",
+      "params": []
+    }
+  ]
+}

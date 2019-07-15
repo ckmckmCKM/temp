@@ -1,0 +1,83 @@
+
+Zjh_hg.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+arm
+  rotate: true
+  xy: 155, 87
+  size: 27, 40
+  orig: 27, 40
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 84
+  size: 151, 164
+  orig: 151, 164
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 406, 212
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1
+hair1
+  rotate: false
+  xy: 365, 208
+  size: 39, 40
+  orig: 39, 40
+  offset: 0, 0
+  index: -1
+hair2
+  rotate: true
+  xy: 70, 9
+  size: 17, 32
+  orig: 17, 32
+  offset: 0, 0
+  index: -1
+hairend1
+  rotate: false
+  xy: 70, 28
+  size: 58, 54
+  orig: 58, 54
+  offset: 0, 0
+  index: -1
+hairend2
+  rotate: false
+  xy: 2, 2
+  size: 66, 80
+  orig: 66, 80
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 305, 143
+  size: 38, 45
+  orig: 38, 45
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 155, 116
+  size: 148, 132
+  orig: 148, 132
+  offset: 0, 0
+  index: -1
+jbtwlz
+  rotate: false
+  xy: 305, 190
+  size: 58, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1
+wink
+  rotate: false
+  xy: 450, 212
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,124 @@
+
+syntax = "proto3";
+package msg;
+
+
+//subCmd列表
+/*
+    S2C_INTO_ROOM        = 0  //进入房间                S2CTableInfo
+	S2C_OTHER_INTO_ROOM  = 1  //其他人进入房间           S2CUserInfo
+	S2C_WAIT_START       = 2  //当前房间只有1人，等待开赛  null
+	S2C_TICKER_START     = 3  //房间有2人，进入开赛倒计时  S2CTickerStart
+	S2C_SEND_CARDS_OK    = 4  //发牌完毕，玩家开始发言     S2CUserInfo //当前发言玩家
+	S2C_USER_ACTION      = 5  //玩家发言                S2CUserActionInfo
+	S2C_COMPARE_CARDS    = 6  //比牌                    S2CCompareResArr
+	S2C_LEAVE_TABLE      = 7  //离开牌桌                S2CUserInfo
+	S2C_CUR_ACTION_USER  = 8  //当前发言玩家              S2CUserInfo
+	S2C_FINISH_GAME      = 9  //比赛结束                S2CEndGame
+	S2C_USER_SEE_CARDS   = 10 //玩家看牌                S2CUserSeeCards
+	S2C_FINISH_CUR_ROUND = 11 //结束当前轮，返回牌桌信息等 S2CTableInfo
+	S2C_TABLE_INFO = 12//返回给客户端当钱牌桌信息          S2CTableInfo
+	S2C_START_SEND_CARDS       = 13 //开始发牌          S2CTableInfo
+	S2C_GET_CAN_COMPARE_LIST       = 14 //获取可比牌的用户列表          S2CUserInfoArr
+	S2C_GIVE_UP_CARDS_FOR_SELF = 15 //弃牌给自己看       S2CUserSeeCards
+*/
+
+
+//错误code列表
+/*
+    ERROR_CODE_OK           = 20000 //没有错误消息，主要用于程序内部判断
+	ERROR_CODE_NOT_INTOROOM = 10000 //玩家还未进入房间或没连上线
+	ERROR_CODE_NOT_ENOUGH   = 10001 //玩家资金不足
+	ERROR_CODE_LESS_MIN     = 10002 //玩家下注金额小于当前最小金额
+	ERROR_CODE_NIL          = 10003 //非法错误,一些空指针异常等
+	ERROR_CODE_CANNOT_LEAVE = 10004 //非法离开牌桌
+*/
+
+//发送给客户端所有消息协议封包，buff是具体的结构体内容，需要端对照相应的协议解析
+message S2CMsg{ //subCmd 0
+    int32 mainCmd = 1;  //主消息协议
+    int32 subCmd = 2;	//次消息协议
+    bytes buff = 3; 	//数据流
+}
+
+//牌桌信息
+message S2CTableInfo{
+    int32 tableId = 1;
+    string tableName = 2;
+    int32 curStatus =3; //房间当前状态      0 //准备开赛   1 //开始计时  2 //正在游戏   3 //游戏结束
+    int32 round =4 ;//当前轮数
+    int64 poolAmount = 5;//池子里已下注的金额
+    int32 totalRound = 6;  //总轮数
+    int64  minAction =7;  //最低下注
+    int64 maxAction =8 ;  //最高下注
+    repeated S2CUserInfo userInfoArr = 9;//其他玩家的信息
+    int32 triggerTime = 10;//牌桌当前倒计时还剩余的秒数，单位为秒
+    string triggerEvent = 11;//该倒计时结束即将要执行的操作，比如开始游戏、玩家发言等
+    S2CUserInfo curUserInfo = 12;//当前发言玩家
+    S2CUserInfo banker = 13;//庄家
+    repeated int32 raiseAmount = 14; //配置的加注金额  +2 +5 +10
+
+}
+
+//比牌结果
+message S2CCompareRes{
+    int32 winId = 1;
+    repeated int32 loseIds = 2;
+    int64 firstAmount = 3; //发起者的余额，因为发起者要立即扣钱，直接返回发起者的余额
+    int32 firstId = 4; //发起者id
+}
+
+//用户信息
+message S2CUserInfo{
+    int32 userId = 1;
+    string userName = 2;
+    int64 ticker = 3;//发言倒计时时长
+    string head = 4;//玩家头像
+    int64 amount = 5;//玩家当前携带的金额
+    int64 curActionAmount = 6;//玩家已下注的金额
+    int32 chairId = 7;//椅子号
+    int32 curRaiseAmount = 8; //玩家加注的金额大小（给下一个玩家看 +2 +5 +10）
+    int32 curStatus = 9;//用户当前状态    0 玩家登陆进来在大厅 1进入房间，坐下，准备开赛   2正在游戏 3比牌输了  4弃牌  5旁观  6该局比赛结束
+    int64 followAmount = 10;   //跟注需要的金额
+    int64 allInAmount = 11;    //梭哈需要的金额
+
+}
+message S2CUserInfoArr{
+    repeated S2CUserInfo userInfoArr  = 1;
+}
+
+//用户发言的内容
+message S2CUserActionInfo{
+    int32 userId = 1;   //发言的玩家
+    string option = 2;  //"give_up"：弃牌 raise:加注 see_cards:看牌 all_in
+    int64 amount=3; //只有加注才需要去解析该字段
+    string userName = 4;
+    int64 curAmount = 5;//玩家当前下注总金额
+    int64 poolAmount = 6;//该局池子总金额
+}
+
+//玩家看牌之后返回的结果
+message S2CUserSeeCards{
+    int32 userId = 1;
+    bytes cards = 2;    //手中的牌
+    int32 card_type = 3;//牌型  /*  8 //豹子      7 //顺金   6//顺金123   5 //金花    4 //顺子      3//顺子A23      2 //对子        1 //单张*/
+}
+
+//游戏结束，给所有玩家返回胜者和赢的金额
+//返回玩家自己的、与自己比过牌的玩家的牌和牌型
+message S2CEndGame{
+    S2CUserInfo winner = 1; //赢家
+    int64 winAmount = 2;    //赢的钱
+    repeated S2CUserSeeCards comparedUserArr = 3;//和自己比过牌的玩家
+    repeated S2CUserAmount loserAmount = 4;    //各个输了的玩家与输了的钱
+}
+
+message S2CUserAmount {
+    int32 userId = 1;
+    int64 amount = 2;   //用户投入的钱，比如当局比赛结束，输了10，amount就等于10
+}
+
+//倒计时
+message S2CTickerStart{
+    int32 ticker = 1;   //秒为单位，5 就表示5秒
+}

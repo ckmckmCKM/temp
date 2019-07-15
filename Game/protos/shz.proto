@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+//枚举消息类型
+enum MsgIDC2S{
+    STARTID = 0;
+	AskSence = 1;
+	Bet = 2;	//下注消息
+	XiaMaLi = 3;//小玛丽消息
+	BiBei = 4;//比倍消息
+}
+
+//枚举消息类型
+enum ReMsgIDS2C{
+    RESTARTID = 0;
+	SenceID = 1;//场景消息
+	BetRet = 2;	//下注消息
+	BetFailID = 3;//下注失败
+	XiaMaLiRet = 4;//小玛丽消息
+	BiBeiRet = 5;//比倍结果
+}
+
+message UserBet{
+	int32 BetMoney = 1;//单线押注金币
+}
+
+message BetFail{
+	int32 FailID=1;//失败的ID
+	string Reson = 2;//下注失败的原因
+}
+
+message LineInfo{
+	int32 Index=1;//线编号下标
+	int32 Count=2;//中奖图的个数
+	int64 Gold=3;//奖励的钱
+	int32 Start=4;//线的起始方向，0左起，1右起
+}
+
+message BetRes{
+	int64 UserGold=1;
+	repeated int32 IconArr = 2;//图片结果
+	int32 Odds=3;//玩家赢得的总倍数
+	int64 Gold=4;//奖励的钱
+	repeated LineInfo Line=5;//压线数组
+	int32 XiaoMaLi=6;//小玛丽次数
+	int32 Cheat = 10;//作弊值
+	int64 BloodPool = 11;//血池值
+}
+
+message XiaoMaLiRes{
+	int32 Times = 1;//小玛丽次数
+	int32 OutIndex = 2; //外圈索引
+	repeated int32 InIcon = 3;//内圈的图标ID
+	int64 Gold = 4;//本次获取的钱
+	bool Exit=5;//是否退出小玛丽
+}
+
+//场景消息
+message Sence{
+	int64 Gold = 1;//用户的钱
+	repeated int32  BetValue = 2;//用户下注的筹码
+}
+
+//玩家发送比倍请求
+message C2SBiBei{
+	int32 Result = 1;//玩家押注结果，和为0，小为1，大为2
+}
+
+//比倍结果
+message S2CBiBeiRes{
+	int32 Dice1 = 1;
+	int32 Dice2 = 2;
+	int64 Gold = 3;
+}

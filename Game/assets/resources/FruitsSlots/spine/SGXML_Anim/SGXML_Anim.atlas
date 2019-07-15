@@ -1,0 +1,146 @@
+
+SGXML_Anim.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+meinvdh_1
+  rotate: false
+  xy: 254, 320
+  size: 49, 24
+  orig: 49, 24
+  offset: 0, 0
+  index: -1
+meinvdh_10
+  rotate: false
+  xy: 225, 84
+  size: 32, 65
+  orig: 32, 65
+  offset: 0, 0
+  index: -1
+meinvdh_11
+  rotate: false
+  xy: 305, 213
+  size: 109, 131
+  orig: 109, 131
+  offset: 0, 0
+  index: -1
+meinvdh_12
+  rotate: false
+  xy: 132, 39
+  size: 50, 84
+  orig: 50, 84
+  offset: 0, 0
+  index: -1
+meinvdh_13
+  rotate: false
+  xy: 290, 102
+  size: 29, 47
+  orig: 29, 47
+  offset: 0, 0
+  index: -1
+meinvdh_14
+  rotate: false
+  xy: 132, 4
+  size: 55, 33
+  orig: 55, 33
+  offset: 0, 0
+  index: -1
+meinvdh_15
+  rotate: true
+  xy: 181, 151
+  size: 137, 122
+  orig: 137, 122
+  offset: 0, 0
+  index: -1
+meinvdh_16
+  rotate: false
+  xy: 254, 299
+  size: 45, 19
+  orig: 45, 19
+  offset: 0, 0
+  index: -1
+meinvdh_17
+  rotate: false
+  xy: 254, 346
+  size: 163, 164
+  orig: 166, 164
+  offset: 0, 0
+  index: -1
+meinvdh_18
+  rotate: false
+  xy: 2, 2
+  size: 128, 121
+  orig: 128, 121
+  offset: 0, 0
+  index: -1
+meinvdh_19
+  rotate: false
+  xy: 2, 125
+  size: 177, 163
+  orig: 177, 163
+  offset: 0, 0
+  index: -1
+meinvdh_2
+  rotate: false
+  xy: 321, 113
+  size: 32, 37
+  orig: 32, 37
+  offset: 0, 0
+  index: -1
+meinvdh_20
+  rotate: false
+  xy: 2, 290
+  size: 250, 220
+  orig: 250, 220
+  offset: 0, 0
+  index: -1
+meinvdh_3
+  rotate: true
+  xy: 225, 65
+  size: 17, 31
+  orig: 17, 31
+  offset: 0, 0
+  index: -1
+meinvdh_4
+  rotate: true
+  xy: 388, 156
+  size: 55, 20
+  orig: 55, 20
+  offset: 0, 0
+  index: -1
+meinvdh_5
+  rotate: true
+  xy: 259, 85
+  size: 64, 29
+  orig: 64, 29
+  offset: 0, 0
+  index: -1
+meinvdh_6
+  rotate: true
+  xy: 419, 348
+  size: 44, 85
+  orig: 44, 85
+  offset: 0, 0
+  index: -1
+meinvdh_7
+  rotate: false
+  xy: 419, 394
+  size: 78, 116
+  orig: 78, 116
+  offset: 0, 0
+  index: -1
+meinvdh_8
+  rotate: false
+  xy: 184, 63
+  size: 39, 86
+  orig: 39, 86
+  offset: 0, 0
+  index: -1
+meinvdh_9
+  rotate: false
+  xy: 305, 152
+  size: 81, 59
+  orig: 81, 59
+  offset: 0, 0
+  index: -1

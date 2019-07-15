@@ -1,0 +1,34 @@
+
+laohu.png
+size: 640,636
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+laohu_hutou
+  rotate: true
+  xy: 477, 429
+  size: 205, 159
+  orig: 205, 159
+  offset: 0, 0
+  index: -1
+laohu_qianzhua
+  rotate: true
+  xy: 477, 258
+  size: 169, 155
+  orig: 169, 155
+  offset: 0, 0
+  index: -1
+laohu_shenti
+  rotate: false
+  xy: 2, 129
+  size: 473, 505
+  orig: 473, 505
+  offset: 0, 0
+  index: -1
+laohu_weiba
+  rotate: false
+  xy: 2, 25
+  size: 237, 102
+  orig: 237, 102
+  offset: 0, 0
+  index: -1
