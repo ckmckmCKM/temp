@@ -1,0 +1,177 @@
+
+honghei_vs.png
+size: 1016,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+s
+  rotate: true
+  xy: 852, 264
+  size: 143, 159
+  orig: 143, 159
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_00
+  rotate: false
+  xy: 2, 508
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_01
+  rotate: false
+  xy: 2, 2
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_02
+  rotate: true
+  xy: 427, 589
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_03
+  rotate: false
+  xy: 427, 83
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+v
+  rotate: false
+  xy: 852, 409
+  size: 148, 178
+  orig: 148, 178
+  offset: 0, 0
+  index: -1
+
+honghei_vs2.png
+size: 1016,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shandian/vs_shandian_04
+  rotate: false
+  xy: 2, 508
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_05
+  rotate: false
+  xy: 2, 2
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_06
+  rotate: true
+  xy: 427, 589
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_07
+  rotate: false
+  xy: 427, 83
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+
+honghei_vs3.png
+size: 1016,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shandian/vs_shandian_08
+  rotate: false
+  xy: 2, 508
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_09
+  rotate: false
+  xy: 2, 2
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_10
+  rotate: true
+  xy: 427, 589
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_11
+  rotate: false
+  xy: 427, 83
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+
+honghei_vs4.png
+size: 1016,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shandian/vs_shandian_12
+  rotate: false
+  xy: 2, 508
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_13
+  rotate: false
+  xy: 2, 2
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_14
+  rotate: true
+  xy: 427, 589
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+shandian/vs_shandian_15
+  rotate: false
+  xy: 427, 83
+  size: 423, 504
+  orig: 423, 504
+  offset: 0, 0
+  index: -1
+
+honghei_vs5.png
+size: 784,780
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guang
+  rotate: false
+  xy: 2, 132
+  size: 317, 645
+  orig: 317, 645
+  offset: 0, 0
+  index: -1
+guang1
+  rotate: false
+  xy: 526, 529
+  size: 253, 248
+  orig: 253, 248
+  offset: 0, 0
+  index: -1
+heiban
+  rotate: true
+  xy: 321, 222
+  size: 555, 203
+  orig: 555, 203
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,86 @@
+{
+"skeleton": { "hash": "7T+cac6Yy9m5Wfm/rM4EoKLcdVI", "spine": "3.7.94", "width": 143, "height": 54, "images": "G:/资源/红黑大战/进入游戏按钮", "audio": "" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "jinruyouxianniu_00", "bone": "root", "attachment": "jinruyouxianniu_00" }
+],
+"skins": {
+	"default": {
+		"jinruyouxianniu_00": {
+			"jinruyouxianniu_00": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_01": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_02": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_03": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_04": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_05": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_06": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_07": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_08": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_09": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_10": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_11": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_12": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_13": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_14": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_15": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_16": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_17": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_18": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_19": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_20": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_21": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_22": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_23": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_24": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_25": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_26": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_27": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_28": { "x": 0.5, "width": 143, "height": 54 },
+			"jinruyouxianniu_29": { "x": 0.5, "width": 143, "height": 54 }
+		}
+	}
+},
+"animations": {
+	"jinruyouxianniu": {
+		"slots": {
+			"jinruyouxianniu_00": {
+				"attachment": [
+					{ "time": 0, "name": "jinruyouxianniu_00" },
+					{ "time": 0.0333, "name": "jinruyouxianniu_01" },
+					{ "time": 0.0667, "name": "jinruyouxianniu_02" },
+					{ "time": 0.1, "name": "jinruyouxianniu_03" },
+					{ "time": 0.1333, "name": "jinruyouxianniu_04" },
+					{ "time": 0.1667, "name": "jinruyouxianniu_05" },
+					{ "time": 0.2, "name": "jinruyouxianniu_06" },
+					{ "time": 0.2333, "name": "jinruyouxianniu_07" },
+					{ "time": 0.2667, "name": "jinruyouxianniu_08" },
+					{ "time": 0.3, "name": "jinruyouxianniu_09" },
+					{ "time": 0.3333, "name": "jinruyouxianniu_10" },
+					{ "time": 0.3667, "name": "jinruyouxianniu_11" },
+					{ "time": 0.4, "name": "jinruyouxianniu_12" },
+					{ "time": 0.4333, "name": "jinruyouxianniu_13" },
+					{ "time": 0.4667, "name": "jinruyouxianniu_14" },
+					{ "time": 0.5, "name": "jinruyouxianniu_15" },
+					{ "time": 0.5333, "name": "jinruyouxianniu_16" },
+					{ "time": 0.5667, "name": "jinruyouxianniu_17" },
+					{ "time": 0.6, "name": "jinruyouxianniu_18" },
+					{ "time": 0.6333, "name": "jinruyouxianniu_19" },
+					{ "time": 0.6667, "name": "jinruyouxianniu_20" },
+					{ "time": 0.7, "name": "jinruyouxianniu_21" },
+					{ "time": 0.7333, "name": "jinruyouxianniu_22" },
+					{ "time": 0.7667, "name": "jinruyouxianniu_23" },
+					{ "time": 0.8, "name": "jinruyouxianniu_24" },
+					{ "time": 0.8333, "name": "jinruyouxianniu_25" },
+					{ "time": 0.8667, "name": "jinruyouxianniu_26" },
+					{ "time": 0.9, "name": "jinruyouxianniu_27" },
+					{ "time": 0.9333, "name": "jinruyouxianniu_28" },
+					{ "time": 0.9667, "name": "jinruyouxianniu_29" },
+					{ "time": 1, "name": "jinruyouxianniu_00" }
+				]
+			}
+		}
+	}
+}
+}

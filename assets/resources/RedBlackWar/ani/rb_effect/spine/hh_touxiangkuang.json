@@ -1,0 +1,88 @@
+{
+"skeleton": { "hash": "FEYBOPAqtp4adsBEPsI0r02ppWA", "spine": "3.7.94", "width": 111, "height": 104, "images": "G:/资源/龙虎斗/touxiangkuang", "audio": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "honghei_touxiangkuang", "parent": "root" }
+],
+"slots": [
+	{ "name": "hh_touxiangkuang", "bone": "honghei_touxiangkuang", "attachment": "touxiangkuang_30" }
+],
+"skins": {
+	"default": {
+		"hh_touxiangkuang": {
+			"touxiangkuang_00": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_01": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_02": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_03": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_04": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_05": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_06": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_07": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_08": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_09": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_10": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_11": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_12": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_13": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_14": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_15": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_16": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_17": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_18": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_19": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_20": { "width": 111, "height": 104 },
+			"touxiangkuang_21": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_22": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_23": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_24": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_25": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_26": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_27": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_28": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_29": { "x": 0.5, "width": 111, "height": 104 },
+			"touxiangkuang_30": { "x": 0.5, "width": 111, "height": 104 }
+		}
+	}
+},
+"animations": {
+	"hh_touxiangkuang": {
+		"slots": {
+			"hh_touxiangkuang": {
+				"attachment": [
+					{ "time": 0, "name": "touxiangkuang_00" },
+					{ "time": 0.0333, "name": "touxiangkuang_01" },
+					{ "time": 0.0667, "name": "touxiangkuang_02" },
+					{ "time": 0.1, "name": "touxiangkuang_03" },
+					{ "time": 0.1333, "name": "touxiangkuang_04" },
+					{ "time": 0.1667, "name": "touxiangkuang_05" },
+					{ "time": 0.2, "name": "touxiangkuang_06" },
+					{ "time": 0.2333, "name": "touxiangkuang_07" },
+					{ "time": 0.2667, "name": "touxiangkuang_08" },
+					{ "time": 0.3, "name": "touxiangkuang_09" },
+					{ "time": 0.3333, "name": "touxiangkuang_10" },
+					{ "time": 0.3667, "name": "touxiangkuang_11" },
+					{ "time": 0.4, "name": "touxiangkuang_12" },
+					{ "time": 0.4333, "name": "touxiangkuang_13" },
+					{ "time": 0.4667, "name": "touxiangkuang_14" },
+					{ "time": 0.5, "name": "touxiangkuang_15" },
+					{ "time": 0.5333, "name": "touxiangkuang_16" },
+					{ "time": 0.5667, "name": "touxiangkuang_17" },
+					{ "time": 0.6, "name": "touxiangkuang_18" },
+					{ "time": 0.6333, "name": "touxiangkuang_19" },
+					{ "time": 0.6667, "name": "touxiangkuang_20" },
+					{ "time": 0.7, "name": "touxiangkuang_21" },
+					{ "time": 0.7333, "name": "touxiangkuang_22" },
+					{ "time": 0.7667, "name": "touxiangkuang_23" },
+					{ "time": 0.8, "name": "touxiangkuang_24" },
+					{ "time": 0.8333, "name": "touxiangkuang_25" },
+					{ "time": 0.8667, "name": "touxiangkuang_26" },
+					{ "time": 0.9, "name": "touxiangkuang_27" },
+					{ "time": 0.9333, "name": "touxiangkuang_28" },
+					{ "time": 0.9667, "name": "touxiangkuang_29" },
+					{ "time": 1, "name": "touxiangkuang_30" }
+				]
+			}
+		}
+	}
+}
+}
