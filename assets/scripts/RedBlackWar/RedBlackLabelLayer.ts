@@ -22,8 +22,9 @@ export default class RedBlackLabelLayer extends cc.Component {
         _labelNode.getComponent("RedBlackLabel").setLable(money);
         _labelNode.parent = parent;
         _labelNode.stopAllActions();
+        _labelNode.setPosition(0, -10);
         _labelNode.runAction(cc.sequence(
-            cc.moveBy(0.5, cc.v2(0, 70)),
+            cc.moveBy(0.3, cc.v2(0, 30)),
             cc.delayTime(2),
             cc.callFunc(() => {
                 _labelNode.destroy();

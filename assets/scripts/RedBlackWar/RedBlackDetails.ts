@@ -36,7 +36,7 @@ export default class RedBlackDetails extends cc.Component {
     onLoad() {
         window.RedBlack = window.RedBlack || {};
         window.RedBlack.RedBlackDetails = this;
-        // this.refreshWinPercentage(97, 3);
+        // this.refreshWinPercentage(3, 97);
         // this.refreshBrandRoad();
     }
 
@@ -45,29 +45,24 @@ export default class RedBlackDetails extends cc.Component {
         let _redNum = 0;
         let _nums = [0, 0, 0];//红黑 all
         let _len = msg.Win.length;
+        for (let i = _len - 1; i >= 0; --i) {
+            if (msg.Win[i] == 1) {
+                ++_nums[0];
+            } else if (msg.Win[i] == 2) {
+                ++_nums[1];
+            }
+
+        }
         if (_len > 20) {
             for (let i = 0; i < 20; ++i) {
                 this.trendData[0].unshift(winId[msg.Win[_len - 1 - i]]);//splice(1, 0, winId[msg.Win[i]]);
-                if (msg.Win[_len - 1 - i] == 1) {
-                    ++_nums[0];
-                } else if (msg.Win[_len - 1 - i] == 2) {
-                    ++_nums[1];
-                }
             }
         } else {
-            for (let i = _len - 1; i >= 0; --i) {
-                if (msg.Win[i] == 1) {
-                    ++_nums[0];
-                } else if (msg.Win[i] == 2) {
-                    ++_nums[1];
-                }
-
-            }
             for (let i = 0; i < msg.Win.length; ++i) {
                 this.trendData[0].push(winId[msg.Win[i]]);
             }
         }
-        // this.setNums(_nums);
+        this.setNums(_nums);
         _redNum = _nums[0];
         if (this.trendData[0].length === 0) {
             _redNum = 50;
@@ -107,12 +102,17 @@ export default class RedBlackDetails extends cc.Component {
             this.numLable[i].string = nums[i] + "";
             console.warn("nums[i] = " + nums[i]);
         }
-        this.numLable[2].string = (nums[0] + nums[1]) + "";
+        this.numLable[2].string = "局数"+"  "+(nums[0] + nums[1]);
     }
 
     refreshWinPercentage(blackNum = 50, redNum = 50) {
         let _black = Math.floor(blackNum / 100 * 100) / 100;
         let _width = this.winPercentage.getContentSize().width;
+        if (_black < 0.1)
+            _black = 0.1;
+        if (_black > 0.9)
+            _black = 0.9;
+
         this.winPercentage.getChildByName("mask").anchorX = 1 - _black;
         this.blackPercentage.string = blackNum + "%";
         this.redPercentage.string = redNum + "%";
@@ -120,10 +120,10 @@ export default class RedBlackDetails extends cc.Component {
         let _w = -_width / 2 + blackNum / 100 * _width;
 
         _shengFuNode.x = _w;
-        if (_w > 316) {
-            _shengFuNode.x = 316;
-        } else if (_w < -316) {
-            _shengFuNode.x = -316
+        if (_w > 220) {
+            _shengFuNode.x = 220;
+        } else if (_w < -220) {
+            _shengFuNode.x = -220;
         }
     }
 
@@ -135,14 +135,20 @@ export default class RedBlackDetails extends cc.Component {
             item.getComponent("RedBlackTrendChartItem").setTrendChart1(winId[arr[i]]);
             this.winTrendChart.addChild(item);
         }
+        if (_len > 0)
+            this.winTrendChart.children[_len - 1].getComponent("RedBlackFlash").flashRepeat(3, 0.3, true);
 
     }
 
     refreshBrandRoad(
-        arr = [0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0]) {
+        arr = [2,2,1,2,1,2,2,2,2,1,2,2,2,2,2,2,2,2,1
+            ,2,2,2,2,1,1,2,2,1,2,2,2,2,1,1,2,1,2,1,2
+            // ,1,1,1,2,2,2,2,1,2,2,2,1,2,1,1,1,1,1,1,2,2,1,2,1,2,2
+        ]) {
         let arr1 = [];
         let arr2 = [];
-        for (let i = 0; i < 100; ++i) {
+        let _len = ((arr.length < 29) ? 29 : arr.length);
+        for (let i = 0; i < _len; ++i) {
             let _arr2 = [];
             for (let j = 0; j < 6; ++j) {
                 _arr2.push(-1);
@@ -157,6 +163,10 @@ export default class RedBlackDetails extends cc.Component {
         let _isH = false; //是不是往横
         let _dataArr1 = arr1[_horizontal][_vertical];//每一局对应的子节点显示
         arr2[0][0] = winId[arr[0]];
+        let _last = {
+            x: -1,
+            y: -1,
+        };
         ++_vertical;
         _curHorizontal = _horizontal;
         for (let i = 1; i < arr.length; ++i) {
@@ -180,12 +190,6 @@ export default class RedBlackDetails extends cc.Component {
                 _curHorizontal = _horizontal;
                 _isH = false;
             }
-            //长度超出不再添加
-            if (_horizontal >= 26 || _curHorizontal >= 26) {
-                arr.shift();
-                this.refreshBrandRoad(arr);
-                return;
-            }
             _dataArr1 = arr1[_curHorizontal][_vertical];
             //被占用
             if (_dataArr1 !== -1) {
@@ -196,6 +200,10 @@ export default class RedBlackDetails extends cc.Component {
             }
             // _dataArr = winId[arr[i]];
             arr2[_curHorizontal][_vertical] = winId[arr[i]];
+            if (arr2[_curHorizontal][_vertical] != -1) {
+                _last.x = _curHorizontal;
+                _last.y = _vertical;
+            }
             if (!_isH) {
                 ++_vertical;
             } else {
@@ -203,46 +211,60 @@ export default class RedBlackDetails extends cc.Component {
             }
         }
         
-        for (let i = 0; i < 100 - 26; ++i) {
-            if (arr2[i][0] === -1 && arr2[i][5] === -1) {
-                arr2.splice(i, 100 - 26);
+        for (let i = 0; i < _len; ++i) {
+            let _isOver = true;
+            for (let j = 0; j < 6; ++j) {
+                if (arr2[i][j] !== -1) {
+                    _isOver = false;
+                    break;
+                }
+            }
+            if (_isOver) {
+                arr2.splice(i, _len - 1);
                 break;
             }
         }
-        if (arr2.length > 26) {
-            arr2.splice(0, arr2.length - 26);
+        while (arr2.length > 29) {
+            _last.x -= (arr2.length - 29);
+            arr2.splice(0, arr2.length - 29);
+        }
+        if (arr2.length < 29) {
+            let _len = 29 - arr2.length;
+            for (let i = 0; i < _len; ++i) {
+                let _arr2 = [];
+                for (let j = 0; j < 6; ++j) {
+                    _arr2.push(-1);
+                }
+                arr2.push(_arr2);
+            }
         }
 
-        this.brandRoad.removeAllChildren();
-        let _brandRoad = cc.instantiate(this.brandRoadPre);// 纵轴 最多6个子节点
-        for (let i = 0; i < 26; ++i) {
-            _brandRoad = cc.instantiate(this.brandRoadPre);
-            this.brandRoad.addChild(_brandRoad);
+        if (this.brandRoad.childrenCount < 29) {
+            this.brandRoad.removeAllChildren();
+            let _brandRoad = cc.instantiate(this.brandRoadPre);// 纵轴 最多6个子节点
+            for (let i = 0; i < 29; ++i) {
+                _brandRoad = cc.instantiate(this.brandRoadPre);
+                this.brandRoad.addChild(_brandRoad);
+            }
         }
         let _item = null;
-        let _ij = [0, 0];
-        let _nums = [0, 0];
-        for (let i = 0; i < 26; ++i) {
+        for (let i = 0; i < 29; ++i) {
             for (let j = 0; j < 6; ++j) {
                 _item = this.brandRoad.children[i].children[j];
                 if (arr2[i][j] !== -1){
                     _item.getComponent("RedBlackTrendChartItem").setBrandRoad(arr2[i][j]);
                     _item.opacity = 255;
-                    //红
-                    if (arr2[i][j] === 1) {
-                        ++_nums[0];
-                    } else {
-                        ++_nums[1];
-                    }
-                    _ij[0] = i;
-                    _ij[1] = j;
+                }else{
+                    _item.opacity = 0;
                 }
             }
         }
-        _item = this.brandRoad.children[_ij[0]].children[_ij[1]];
-        _item.getComponent("RedBlackFlash").flashRepeat(3, 0.3, true);
+        if (_last.x > -1){
+            _item = this.brandRoad.children[_last.x].children[_last.y];
+            _item.getComponent("RedBlackFlash").flashRepeat(3, 0.3, true);
+        }
         window.RedBlack.RedBlackCentrePanel.hideNoMove(showPanelIdType.quanquan);
-        this.setNums(_nums);
+        // this.setNums(_nums);
     }
 
     refreshCardTypeChart(arr = [0, 1, 2, 3, 4]) {
@@ -251,8 +273,8 @@ export default class RedBlackDetails extends cc.Component {
         for (let i = 0; i < _len; ++i) {
             let item = cc.instantiate(this.cardTypeChartPre);
             item.getChildByName("flash").active = false;
-            item.getComponent("RedBlackTrendChartItem").setCardTypeChart(this.trendData[1][i]);
-            item.setContentSize(97, 42);
+            item.getComponent("RedBlackTrendChartItem").setCardTypeChart(this.trendData[1][i], 1);
+            item.setContentSize(90, 30);
             this.cardTypeChart.addChild(item);
         }
         if (_len > 0) {

@@ -42,20 +42,11 @@ export default class RedBlackMsg extends cc.Component {
     @property(cc.Prefab)
     Marquee : cc.Prefab = null;
 
-    //ce
-    @property(cc.EditBox)
-    red_hua : cc.EditBox = null;
-    @property(cc.EditBox)
-    red_zi : cc.EditBox = null;
-    @property(cc.EditBox)
-    black_hua : cc.EditBox = null;
-    @property(cc.EditBox)
-    black_zi : cc.EditBox = null;
-
     onLoad() {
         let self = this;
         window.RedBlack = window.RedBlack || {};
         window.RedBlack.RedBlackMsg = self;
+        this.setMarquee(false);
 
         console.log("RedBlackMsg onLoad");
         self.startChoose();
@@ -76,13 +67,18 @@ export default class RedBlackMsg extends cc.Component {
             window.RedBlack.RedBlackGamePanel.clearOtherTime();
             window.RedBlack.RedBlackGamePanel.clearTime();
         }
-        let _Marquee = cc.find("Canvas/Marquee");
+        this.setMarquee(active);
+    }
+
+    setMarquee(active = false){
+        let _Marquee = cc.find("Canvas/Marquee/Marquee");
         if(!_Marquee){
             _Marquee = cc.instantiate(this.Marquee);
-            this.node.addChild(_Marquee);
+            let _parent = cc.find("Canvas/Marquee");
+            _parent.addChild(_Marquee);
         }
         if (active)
-        _Marquee.setPosition(0, 267);
+        _Marquee.setPosition(0, 227);
         else
         _Marquee.setPosition(0, 357);
     }
@@ -138,6 +134,7 @@ export default class RedBlackMsg extends cc.Component {
                 this.roomIdArr.push(info.RoomId);
                 // roomNode.position = cc.v2(-320 + 310*i, -300);
                 roomNode.parent = this.roomListContent;
+                this.roomListContent.children[i].active = false;
             }
             // if (this.roomIdArr.length === 1){
             //     playerMng.autoMatch(roomAry[0].RoomId);
@@ -333,6 +330,7 @@ export default class RedBlackMsg extends cc.Component {
                     for (let i = 0; i < _len; ++i) {
                         if (this.roomIdArr[i] === msg.RoomID) {
                             this.roomListContent.children[i].getComponent("RedBlackDetailsItem").init(msg);//.emit("roomSenceInfoMsg", msg);
+                            this.roomListContent.children[i].active = true;
                         }
                     }
                 }
@@ -378,7 +376,7 @@ export default class RedBlackMsg extends cc.Component {
                 this.isSettleStatus = false;
                 window.RedBlack.RedBlackCentrePanel.hideWaitNextAni();
                 //刷新请下注时间
-                window.RedBlack.RedBlackGamePanel.refreshBetTime(msg.StatusTime - 1000);
+                window.RedBlack.RedBlackGamePanel.refreshBetTime(msg.StatusTime);
                 // // ckm cs
                 // for (let i = 0; i < 3; ++i){
                 //     this.sendMsgRequestBetsResult(i, 0);

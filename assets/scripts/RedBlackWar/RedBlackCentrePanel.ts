@@ -102,33 +102,33 @@ export default class RedBlackRedBlackCentrePanel extends cc.Component {
     }
 
     showIndex(index) {
-        // console.log("index = " + index);
-        for (let i = 0; i < 3; ++i) {
-            if (i <= index) {
-                this.prefabList[showPanelIdType.waitNext].getChildByName("dian").children[i].active = true;
-            } else {
-                this.prefabList[showPanelIdType.waitNext].getChildByName("dian").children[i].active = false;
-            }
-        }
-        return 0;
+        // // console.log("index = " + index);
+        // for (let i = 0; i < 3; ++i) {
+        //     if (i <= index) {
+        //         this.prefabList[showPanelIdType.waitNext].getChildByName("dian").children[i].active = true;
+        //     } else {
+        //         this.prefabList[showPanelIdType.waitNext].getChildByName("dian").children[i].active = false;
+        //     }
+        // }
+        // return 0;
     };
 
     showWaitNextAni() {
-        this.unscheduleAllCallbacks();
+        // this.unscheduleAllCallbacks();
         this.waitNext.active = true;
-        let index = -1;
-        this.schedule(() => {
-            this.showIndex(index);
-            ++index;
-            if (index >= 3) {
-                index = -1;
-            }
-        }, 0.3);
+        // let index = -1;
+        // this.schedule(() => {
+        //     this.showIndex(index);
+        //     ++index;
+        //     if (index >= 3) {
+        //         index = -1;
+        //     }
+        // }, 0.3);
     }
 
     hideWaitNextAni() {
         this.waitNext.active = false;
-        this.unscheduleAllCallbacks();
+        // this.unscheduleAllCallbacks();
     }
 
     showNoMove(index) {
@@ -141,11 +141,9 @@ export default class RedBlackRedBlackCentrePanel extends cc.Component {
 
     showAni(index) {
         this.prefabList[index].active = true;
-        let ani1 = this.prefabList[index].getChildByName("hongsediban");
-        let ani2 = this.prefabList[index].getChildByName("hongsediban").getChildByName("hongSp");
-        ani2.getComponent(sp.Skeleton).setAnimation(1, "honghei_vs", false);
-        ani1.getComponent(cc.Animation).play("hongsediban");
-        // let _curAni = ani2.getComponent(sp.Skeleton).animation;
+        let ani1 = this.prefabList[index].getComponent(cc.Animation);
+        let _name = ani1.defaultClip.name;
+        ani1.play(_name);
     }
 
     showAniDefault(index) {

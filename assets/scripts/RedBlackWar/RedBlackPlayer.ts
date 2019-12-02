@@ -34,8 +34,10 @@ export default class RedBlackPlayer extends cc.Component {
     headSp: cc.Node = null;//头像图片
     @property(cc.Label)
     nike: cc.Label = null;
-    @property(cc.Label)
-    vip: cc.Label = null;
+    @property(cc.Sprite)
+    vip: cc.Sprite = null;
+    @property(cc.SpriteAtlas)
+    viaAtlas: cc.SpriteAtlas = null;
     @property(cc.Label)
     score: cc.Label = null;
     @property(cc.Prefab)
@@ -46,8 +48,8 @@ export default class RedBlackPlayer extends cc.Component {
     isSelfQuan: cc.Node = null;
     @property([cc.SpriteFrame])
     headFrameSp: cc.SpriteFrame[] = [];
-    @property(cc.Node)
-    isSelfAniNode: cc.Node = null;
+    // @property(cc.Node)
+    // isSelfAniNode: cc.Node = null;
     @property(cc.SpriteFrame)
     defaultHeadSp: cc.SpriteFrame = null;
 
@@ -153,7 +155,10 @@ export default class RedBlackPlayer extends cc.Component {
             }
         }
         console.log("initPlayerSelfData" + JSON.stringify(window.playerMng));
-        this.vip && (this.vip.string = window.playerMng.vipLevel + '');//vip等级
+        if (this.vip) {
+            let _sp = this.viaAtlas.getSpriteFrame("v" + window.playerMng.vipLevel);
+            this.vip.spriteFrame = _sp;//vip等级
+        }
         this.playerData.Nick = window.playerMng.nickName;
         this.playerData.Score = window.playerMng.gold;
         this.nike.string = this.playerData.Nick + "";
@@ -243,7 +248,7 @@ export default class RedBlackPlayer extends cc.Component {
         //赢钱时玩家头像特效
         if(money > 0){
             this.winHeadAni.active = true;
-            this.winHeadAni.getChildByName("touxiangkuang_mask").getComponent(cc.Animation).play("touxiangkuang");
+            this.winHeadAni.getComponent(cc.Animation).play("hhxs_touxiangkuang");
         }
     }
 
@@ -265,41 +270,44 @@ export default class RedBlackPlayer extends cc.Component {
             return;
         }
         if (isSelf){
-            let ani = (x = 0, y = 0)=>{
-                return cc.moveTo(0.5,x,y);
-            }
+            // let ani = (x = 0, y = 0)=>{
+            //     return cc.moveTo(0.5,x,y);
+            // }
             let posStart = [cc.v2(0, 60), cc.v2(60, 0), cc.v2(0, -60), cc.v2(-60, 0)];
             let posEnd = [cc.v2(0, 40), cc.v2(40, 0), cc.v2(0, -40), cc.v2(-40, 0)];
             this.headFrame.active = true;
-            this.headFrame.getComponent(cc.Sprite).spriteFrame = this.headFrameSp[1];
+            this.headFrame.getComponent(cc.Sprite).spriteFrame = this.headFrameSp[0];
             this.isSelfQuan.active = true;
-            this.isSelfAniNode.active = true;
-            for (let i = 0; i < this.isSelfAniNode.childrenCount; ++i){
-                this.isSelfAniNode.children[i].stopAllActions();
-                this.isSelfAniNode.children[i].runAction(cc.sequence(
-                    ani(posStart[i].x, posStart[i].y),
-                    ani(posEnd[i].x, posEnd[i].y),
-                    ani(posStart[i].x, posStart[i].y),
-                    ani(posEnd[i].x, posEnd[i].y),
-                    ani(posStart[i].x, posStart[i].y),
-                    ani(posEnd[i].x, posEnd[i].y),
-                    cc.callFunc(()=>{
-                        this.isSelfQuan.active = false;
-                        this.isSelfAniNode.active = false;
-                    }),
-                ));
-            }
+            this.isSelfQuan.stopAllActions();
+            this.isSelfQuan.getComponent("RedBlackFlash").flashRepeat(4, 0.2, true, 50);
+            // this.isSelfAniNode.active = true;
+            // for (let i = 0; i < this.isSelfAniNode.childrenCount; ++i){
+            //     this.isSelfAniNode.children[i].stopAllActions();
+            //     this.isSelfAniNode.children[i].runAction(cc.sequence(
+            //         ani(posStart[i].x, posStart[i].y),
+            //         ani(posEnd[i].x, posEnd[i].y),
+            //         ani(posStart[i].x, posStart[i].y),
+            //         ani(posEnd[i].x, posEnd[i].y),
+            //         ani(posStart[i].x, posStart[i].y),
+            //         ani(posEnd[i].x, posEnd[i].y),
+            //         cc.callFunc(()=>{
+            //             this.isSelfQuan.active = false;
+            //             this.isSelfAniNode.active = false;
+            //         }),
+            //     ));
+            // }
         }
     }
 
     stopIsSelfAni(){
         this.isSelfQuan.active = false;
-        this.isSelfAniNode.active = false;
-        this.headFrame.active = false;
-        // this.headFrame.getComponent(cc.Sprite).spriteFrame = this.headFrameSp[0];
-        for (let i = 0; i < this.isSelfAniNode.childrenCount; ++i){
-            this.isSelfAniNode.children[i].stopAllActions();
-        }
+        // this.isSelfAniNode.active = false;
+        // this.headFrame.active = false;
+        this.isSelfQuan.stopAllActions();
+        this.headFrame.getComponent(cc.Sprite).spriteFrame = this.headFrameSp[0];
+        // for (let i = 0; i < this.isSelfAniNode.childrenCount; ++i){
+        //     this.isSelfAniNode.children[i].stopAllActions();
+        // }
     }
 
 }

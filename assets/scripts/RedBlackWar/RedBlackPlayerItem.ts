@@ -22,6 +22,8 @@ export default class RedBlackPlayerItem extends cc.Component {
     headImg: cc.Sprite = null;
     @property(cc.Sprite)
     godImg: cc.Sprite = null;
+    @property(cc.Sprite)
+    numImg: cc.Sprite = null;
     @property(cc.Label)
     otherRankingLb: cc.Label = null;
     @property(cc.Label)
@@ -57,15 +59,26 @@ export default class RedBlackPlayerItem extends cc.Component {
         this.winNum.string = "获胜：" + userData.WinCount + "局";
         
         //特殊处理 神算子或者大富豪123
-        if (rankId < 4) {
-            // this.godImg.node.active = true;
+        if (rankId === 0){
+            this.godImg.node.active = true;
             this.otherRankingLb.node.active = false;
-            this.godImg.spriteFrame = this.godOrFuSprites[rankId];
-        } else {
-            // this.godImg.node.active = false;
+            this.godImg.spriteFrame = this.godOrFuSprites[0];
+            this.numImg.node.active = false;
+            this.numImg.node.parent.active = false;
+        }else if (rankId < 4) {
+            this.godImg.node.active = true;
             this.otherRankingLb.node.active = true;
             this.otherRankingLb.string = rankId + "";
-            this.godImg.spriteFrame = this.godOrFuSprites[4];
+            this.godImg.spriteFrame = this.godOrFuSprites[1];
+            this.numImg.node.active = true;
+            this.numImg.node.parent.active = true;
+        } else {
+            this.godImg.node.active = false;
+            this.otherRankingLb.node.active = true;
+            this.otherRankingLb.string = rankId + "";
+            // this.godImg.spriteFrame = this.godOrFuSprites[2];
+            this.numImg.node.active = true;
+            this.numImg.node.parent.active = true;
         }
     }
 

@@ -52,9 +52,9 @@ export default class RedBlackFlash extends cc.Component {
         )));
     }
 
-    flashRepeat(num = -1, delayTime = 0.05, active = false) {
+    flashRepeat(num = -1, delayTime = 0.05, active = false, min = 100, cb?:()=>{}) {
         let _ani = cc.sequence(
-            cc.fadeTo(delayTime, 100),
+            cc.fadeTo(delayTime, min),
             cc.fadeTo(delayTime, 250),
         )
         this.node.active = true;
@@ -63,6 +63,7 @@ export default class RedBlackFlash extends cc.Component {
             cc.repeat(_ani, num),
             cc.callFunc(() => {
                 this.node.active = active;
+                cb && cb();
             }),
         ));
     }

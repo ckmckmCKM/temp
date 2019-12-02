@@ -48,7 +48,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 90,
-      "height": 42
+      "height": 30
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -57,8 +57,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 46,
-      "y": -21.5,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -110,8 +110,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 54,
-      "height": 26
+      "width": 34,
+      "height": 17
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -157,7 +157,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "95fad263-314c-4fc0-bf26-3f058588de12"
+      "__uuid__": "8636ca09-407f-4f99-abbb-a2a497200f3e"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -215,7 +215,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 57,
+      "width": 64,
       "height": 26
     },
     "_anchorPoint": {
@@ -225,8 +225,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 26.945,
-      "y": 24.383,
+      "x": 75,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -262,7 +262,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "59fb738b-977d-40d3-9cb9-1a4ade2b9c9c"
+      "__uuid__": "3eaf0d18-2299-4b2b-a78b-dfeb10f69c2d"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -311,10 +311,10 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "3af300cc-35bb-4125-bb0e-45e7bf0b75cf"
+      "__uuid__": "910a66f3-3a5c-4a47-abda-ad0a4ef67b10"
     },
-    "_type": 0,
-    "_sizeMode": 1,
+    "_type": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -341,30 +341,53 @@
     "trendChart": [],
     "CardTypeChartBg": [
       {
-        "__uuid__": "3af300cc-35bb-4125-bb0e-45e7bf0b75cf"
+        "__uuid__": "910a66f3-3a5c-4a47-abda-ad0a4ef67b10"
       },
       {
-        "__uuid__": "800f5b4a-40b2-40e8-b551-268416fd874a"
+        "__uuid__": "cf8cc5bf-53b7-4fbd-a905-c12467493d35"
+      },
+      {
+        "__uuid__": "5c583d10-cd70-4db2-b9e0-3aeb18e831a6"
       }
     ],
     "CardTypeChartZi": [
       {
-        "__uuid__": "3fdc9738-0183-4f37-8202-622dc5a14220"
+        "__uuid__": "8636ca09-407f-4f99-abbb-a2a497200f3e"
       },
       {
-        "__uuid__": "addebfb1-09a6-456d-b1bb-4ea19da7344c"
+        "__uuid__": "b73ccd61-b06f-4419-a938-f54f3d9171ce"
       },
       {
-        "__uuid__": "95317545-30f1-432a-b4eb-7dbe217e150b"
+        "__uuid__": "0e63a0aa-99f7-4bb4-ae23-e965bddbb232"
       },
       {
-        "__uuid__": "134bfb93-3520-4cd6-9ed9-064b677618da"
+        "__uuid__": "60cefbf4-8c02-43b6-af30-893198d8222d"
       },
       {
-        "__uuid__": "203b151b-5bfe-490c-a929-f22ba131f329"
+        "__uuid__": "2304de4d-cfb2-404c-b49a-2a8941c1156a"
       },
       {
-        "__uuid__": "95fad263-314c-4fc0-bf26-3f058588de12"
+        "__uuid__": "7e58dd04-523e-4223-ac5c-73f6e38e624f"
+      }
+    ],
+    "CardTypeChartZi1": [
+      {
+        "__uuid__": "d69959e6-571f-42a1-a310-8e348f7dc03a"
+      },
+      {
+        "__uuid__": "96f01850-ae34-432e-b487-d46af438a125"
+      },
+      {
+        "__uuid__": "cbb88e68-68a6-4e1c-a5e2-c968e276643c"
+      },
+      {
+        "__uuid__": "4ec9584f-bcf8-4c06-a229-e453bc1b7de2"
+      },
+      {
+        "__uuid__": "b69edb52-6c2d-4d88-b409-a2c0250785f2"
+      },
+      {
+        "__uuid__": "7e58dd04-523e-4223-ac5c-73f6e38e624f"
       }
     ],
     "CardBrandRoad": [],

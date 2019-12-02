@@ -93,6 +93,10 @@ export enum AudioType {
     XiaZhu2 = 14,
     daojishi = 15,
     dianji = 16,
+    VS = 17,
+    Win_m = 18,
+    Win_w = 19,
+    Number = 20,
 };
 
 /**

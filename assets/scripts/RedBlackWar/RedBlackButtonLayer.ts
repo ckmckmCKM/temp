@@ -81,12 +81,12 @@ export default class RedBlackButtonLayer extends cc.Component {
     }
 
     openHele() {
-        let _node = this.node.getChildByName("help");
+        let _node = cc.find("Canvas/help");//this.node.getChildByName("help");
         _node.active = true;
     }
 
     closeHele() {
-        let _node = this.node.getChildByName("help");
+        let _node = cc.find("Canvas/help");
         _node.active = false;
     }
 

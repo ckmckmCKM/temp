@@ -4,7 +4,7 @@ const { ccclass, property } = cc._decorator;
 const AUDIO_STRING = ["dianji", "cardType/danzhang", "cardType/duizi", "cardType/shunzi",
     "cardType/jinhua", "cardType/shunjin", "cardType/baozi", "fanpai", "jiesuanchouma",
     "kaishixiazhu", "qianzou", "ruchang", "tingzhixiazhu", "xiazhu1", "xiazhu2",
-     "daojishi", "dianji"];
+     "daojishi", "dianji", "VS", "Win_m", "Win_w", "Number"];
 
 @ccclass
 export default class RedBlackAudioLayer extends cc.Component {

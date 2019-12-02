@@ -1,0 +1,286 @@
+
+hhxs_heidi.png
+size: 1012,488
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bianfu/bianfu_000
+  rotate: false
+  xy: 132, 357
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_001
+  rotate: false
+  xy: 262, 357
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_002
+  rotate: false
+  xy: 254, 146
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_003
+  rotate: false
+  xy: 392, 357
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_004
+  rotate: false
+  xy: 361, 16
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_005
+  rotate: false
+  xy: 384, 148
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_006
+  rotate: false
+  xy: 522, 357
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_007
+  rotate: false
+  xy: 491, 18
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_008
+  rotate: false
+  xy: 514, 153
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_009
+  rotate: false
+  xy: 652, 357
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_010
+  rotate: false
+  xy: 621, 23
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_011
+  rotate: false
+  xy: 644, 171
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_012
+  rotate: false
+  xy: 782, 357
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_013
+  rotate: false
+  xy: 751, 41
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_014
+  rotate: false
+  xy: 774, 172
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+bianfu/bianfu_015
+  rotate: false
+  xy: 881, 42
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+biyan
+  rotate: false
+  xy: 157, 10
+  size: 43, 13
+  orig: 43, 13
+  offset: 0, 0
+  index: -1
+boling
+  rotate: false
+  xy: 580, 301
+  size: 88, 54
+  orig: 88, 54
+  offset: 0, 0
+  index: -1
+huangdi_touzhu1
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangdi_touzhu2
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangdi_touzhu3
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangdi_touzhu4
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangdi_touzhu5
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangdi_touzhu6
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangdi_touzhu7
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangdi_touzhu8
+  rotate: true
+  xy: 2, 3
+  size: 7, 60
+  orig: 7, 60
+  offset: 0, 0
+  index: -1
+huangguan
+  rotate: true
+  xy: 904, 294
+  size: 61, 63
+  orig: 61, 63
+  offset: 0, 0
+  index: -1
+lian
+  rotate: true
+  xy: 486, 283
+  size: 72, 92
+  orig: 72, 92
+  offset: 0, 0
+  index: -1
+neiyi
+  rotate: false
+  xy: 2, 235
+  size: 128, 250
+  orig: 128, 250
+  offset: 0, 0
+  index: -1
+shou
+  rotate: true
+  xy: 202, 2
+  size: 42, 40
+  orig: 42, 40
+  offset: 0, 0
+  index: -1
+toufahou
+  rotate: true
+  xy: 254, 47
+  size: 97, 105
+  orig: 97, 105
+  offset: 0, 0
+  index: -1
+toushi1
+  rotate: true
+  xy: 2, 25
+  size: 19, 186
+  orig: 19, 186
+  offset: 0, 0
+  index: -1
+toushi2
+  rotate: true
+  xy: 2, 12
+  size: 11, 153
+  orig: 11, 153
+  offset: 0, 0
+  index: -1
+xiaolian
+  rotate: false
+  xy: 759, 302
+  size: 46, 53
+  orig: 46, 53
+  offset: 0, 0
+  index: -1
+xiaolian_fajixian
+  rotate: false
+  xy: 244, 13
+  size: 54, 31
+  orig: 54, 31
+  offset: 0, 0
+  index: -1
+yaodai
+  rotate: false
+  xy: 670, 304
+  size: 87, 51
+  orig: 87, 51
+  offset: 0, 0
+  index: -1
+you_yifu
+  rotate: true
+  xy: 2, 46
+  size: 83, 250
+  orig: 83, 250
+  offset: 0, 0
+  index: -1
+youshoubi
+  rotate: true
+  xy: 307, 278
+  size: 77, 177
+  orig: 77, 177
+  offset: 0, 0
+  index: -1
+zuo_yifu
+  rotate: true
+  xy: 2, 131
+  size: 102, 250
+  orig: 102, 250
+  offset: 0, 0
+  index: -1
+zuoshoubi
+  rotate: true
+  xy: 132, 276
+  size: 79, 173
+  orig: 79, 173
+  offset: 0, 0
+  index: -1

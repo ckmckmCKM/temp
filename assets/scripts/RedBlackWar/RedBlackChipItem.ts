@@ -13,10 +13,11 @@ export default class RedBlackChipItem extends cc.Component {
         let numStr = this.chipString(chipId[index]);
         
         let chipLabel = this.node.getComponent("ChipLabel");
+        chipLabel.off.y = 4;
         chipLabel.string = numStr;
     }
 
-    chip_fiy(begin_node, end_node_move, offPos, angle = 0, sprite_id = 0, scale = 0.6) {
+    chip_fiy(begin_node, end_node_move, offPos, angle = 0, sprite_id = 0, scale = 1) {
         let _canvas = cc.Canvas.instance.node;
         let _parent = cc.find("root/chipMove",_canvas);//cc.Canvas.instance.node.getChildByName("root"); chipMove
         let pos1 = begin_node.convertToWorldSpaceAR(_parent.getPosition());   //得到加载的位置
@@ -24,7 +25,7 @@ export default class RedBlackChipItem extends cc.Component {
         // console.log("pos1 = " + pos1);
         this.node.setPosition(cc.v2(pos1.x, pos1.y)); //给新节点位置
         this.node.scale = scale;
-        this.node.angle = angle;//Math.ceil(Math.random() * 90) - 45;
+        this.node.angle = 0;//Math.ceil(Math.random() * 90) - 45;
         _parent.addChild(this.node);  //加载
         this.node.getComponent(cc.Sprite).spriteFrame = this.bgSprits[sprite_id];
         let pos = end_node_move.convertToWorldSpaceAR(_parent.getPosition());
@@ -36,7 +37,8 @@ export default class RedBlackChipItem extends cc.Component {
         // console.log("_offX = " + _offX + "---_offX = " + _offY);
         let move = cc.moveTo(0.5, pos.x + _offX, pos.y + _offY);
         // let move = cc.moveTo(1, pos.x + Math.ceil(Math.random() * 100), pos.y + Math.ceil(Math.random() * 100));   //移动代码
-        this.node.runAction(cc.sequence(move,  cc.rotateBy(0.3, -Math.ceil(Math.random() * 90)), cc.callFunc(() => {
+        //cc.rotateBy(0.3, -Math.ceil(Math.random() * 90)), 
+        this.node.runAction(cc.sequence(move, cc.callFunc(() => {
             // window.RedBlack.RedBlackGamePanel.putChip(this.node);
         })));
     }
@@ -59,7 +61,7 @@ export default class RedBlackChipItem extends cc.Component {
         })));
     }
 
-    chip_fiy_win(begin_node, end_node_move, offPos, addTime = 0, sprite_id = 0, scale = 0.6) {
+    chip_fiy_win(begin_node, end_node_move, offPos, addTime = 0, sprite_id = 0, scale = 1) {
         const areaPos = [cc.v2(443,435), cc.v2(863,435), cc.v2(690,240)];
         let _canvas = cc.Canvas.instance.node;
         let _parent = cc.find("root/chipMove",_canvas);//cc.Canvas.instance.node.getChildByName("root"); chipMove

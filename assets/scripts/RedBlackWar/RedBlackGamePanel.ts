@@ -7,7 +7,7 @@ import {
 } from "./RedBlackCfg";
 import { rbwar } from "./rbwar";
 
-const CARD_POS_X = [[-95, 0, 95], [95, 0, -95]];
+const CARD_POS_X = [[-92, 0, 92], [92, 0, -92]];
 
 const { ccclass, property } = cc._decorator;
 
@@ -58,8 +58,14 @@ export default class RedBlackGamePanel extends cc.Component {
     panelWinOrLoseAnis: cc.Node[] = [];
     @property(cc.Node)
     standBtn: cc.Node = null;
-    // @property(cc.Node)
-    // beilv_jiantou: cc.Node = null;
+    @property(cc.Node)
+    chooseBtn: cc.Node = null;
+    @property(cc.Node)
+    choosePanel: cc.Node = null;
+    @property([cc.Node])
+    lights: cc.Node[] = [];
+    @property([cc.SpriteFrame])
+    lightSps: cc.SpriteFrame[] = [];
 
 
     /**
@@ -75,6 +81,7 @@ export default class RedBlackGamePanel extends cc.Component {
     waitTime = null;//下注倒计时
     otherTime = null;//其他计时器
     _curSeatId = -2;
+    _isOncilckDown = false;//是否是玩家点击坐下
     _sceneSettleInfo = null;
     _curBigWinnerSeatId = -1; // 是否是大赢家
     _curMasterSeatId = -1; // 是否是神算子
@@ -93,6 +100,9 @@ export default class RedBlackGamePanel extends cc.Component {
         this.chipPool = new cc.NodePool();
         this.clearAll();
         this.clearcardPanel();
+        this.choosePanel.active = false;
+        this.choosePanel.scaleY = 0.1;
+        this.chooseBtn.getComponent(cc.Button).interactable = true;
 
         cc.game.on(cc.game.EVENT_HIDE, function () {
             // console.warn("游戏进入后台");
@@ -108,14 +118,14 @@ export default class RedBlackGamePanel extends cc.Component {
 
     onShowGame() {
         let _len = this.trendChart.childrenCount;
-        if (_len > 20) {
-            for (let i = 0; i < _len - 20; ++i) {
+        if (_len > 22) {
+            for (let i = 0; i < _len - 22; ++i) {
                 this.trendChart.children[i].destroy();
             }
         }
         _len = this.cardTypeChart.childrenCount;
-        if (_len > 7) {
-            for (let i = 0; i < _len - 7; ++i) {
+        if (_len > 12) {
+            for (let i = 0; i < _len - 12; ++i) {
                 this.cardTypeChart.children[i].destroy();
             }
         }
@@ -184,9 +194,9 @@ export default class RedBlackGamePanel extends cc.Component {
             let _betArea = this.betingArea[i];
             _betArea.getChildByName("godIcon").active = false;
             _betArea.getChildByName("winBg").active = false;
-            _betArea.getChildByName("otherBet").getComponent(cc.Label).string = "0";
-            _betArea.getChildByName("selfBg").getChildByName("selfBet").getComponent(cc.Label).string = "下注：0";
-            _betArea.getChildByName("selfBg").active = false;
+            _betArea.getChildByName("lableLayout").getChildByName("selfBet").getComponent(cc.RichText).string = "<color=#fcc400> 0</c>";
+            _betArea.getChildByName("lableLayout").getChildByName("otherBet").getComponent(cc.RichText).string = "<color=#ffffff>0/</c>";
+            _betArea.getChildByName("lableLayout").active = false;
         }
         for (let i = 0; i < 3; ++i) {
             this.betAreaNodeArr[i] = [];
@@ -209,8 +219,8 @@ export default class RedBlackGamePanel extends cc.Component {
         this.panelWinOrLoseAnis[2].active = false;
         let _black = this.panelWinOrLoseAnis[1];
         let _red = this.panelWinOrLoseAnis[3];
-        _black.getComponent(sp.Skeleton).setAnimation(1, "king_daiji", true);
-        _red.getComponent(sp.Skeleton).setAnimation(1, "queen_daiji", true);
+        _black.getComponent(sp.Skeleton).setAnimation(0, "hhxs_heidi_daiji", true);
+        _red.getComponent(sp.Skeleton).setAnimation(0, "hhxs_honghou_daiji", true);
         //清理筹码面板上的所有筹码
         this.chipMove.removeAllChildren();
     }
@@ -228,14 +238,14 @@ export default class RedBlackGamePanel extends cc.Component {
             if (_playerScore < chipId[0]) {
                 for (let i = _len - 1; i >= 0; --i) {
                     this.chipLayout.children[i].getChildByName("button").getComponent(cc.Button).interactable = false;
-                    this.chipLayout.children[i].getChildByName("lableLayout").active = true;
+                    this.chipLayout.children[i].getChildByName("num").active = true;
                     this.chipLayout.children[i].getChildByName("select").active = false;
                 }
                 return;
             }
             this.curSelfChooseChipId = 0;
             this.chipLayout.children[0].getChildByName("select").active = true;
-            this.chipLayout.children[0].getChildByName("lableLayout").active = false;
+            this.chipLayout.children[0].getChildByName("num").active = false;
         }
         for (let i = _len - 1; i >= 0; --i) {
             if (_playerScore >= chipId[i] &&
@@ -243,11 +253,11 @@ export default class RedBlackGamePanel extends cc.Component {
                 this.betAreaDataArr[1].selfBet -
                 this.betAreaDataArr[2].selfBet >= chipId[i]) {
                 this.chipLayout.children[i].getChildByName("button").getComponent(cc.Button).interactable = true;
-                this.chipLayout.children[i].getChildByName("lableLayout").active = true;
+                this.chipLayout.children[i].getChildByName("num").active = true;
             } else {
                 if (this.chipLayout.children[i].getChildByName("button").getComponent(cc.Button).interactable) {
                     this.chipLayout.children[this.curSelfChooseChipId].getChildByName("select").active = false;
-                    this.chipLayout.children[this.curSelfChooseChipId].getChildByName("lableLayout").active = true;
+                    this.chipLayout.children[this.curSelfChooseChipId].getChildByName("num").active = true;
                     if (this.curSelfChooseChipId != 0 || i === 0) {
                         if (this.curSelfChooseChipId >= i) {
                             this.curSelfChooseChipId = i - 1;
@@ -255,7 +265,7 @@ export default class RedBlackGamePanel extends cc.Component {
                     }
                     if (this.curSelfChooseChipId > -1) {
                         this.chipLayout.children[this.curSelfChooseChipId].getChildByName("select").active = true;
-                        this.chipLayout.children[this.curSelfChooseChipId].getChildByName("lableLayout").active = false;
+                        this.chipLayout.children[this.curSelfChooseChipId].getChildByName("num").active = false;
                     }
                 }
                 this.chipLayout.children[i].getChildByName("button").getComponent(cc.Button).interactable = false;
@@ -283,6 +293,7 @@ export default class RedBlackGamePanel extends cc.Component {
             let _playerSelf = this.players.children[playerSeatId.player_self];
             _playerSelf.getComponent("RedBlackPlayer").showMoney(userWin, userBet);
             this.playersLabel.getComponent("RedBlackLabelLayer").showMoney(userWin, userBet, this.playersLabel.children[playerSeatId.player_self]);
+            window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.Number), false);
             _playerSelf.getComponent("RedBlackPlayer").setScoreNum(score);
             if (userWin > 0) {
                 this.switchBetArea(winindex, userWin, playerSeatId.player_self, true);
@@ -297,6 +308,9 @@ export default class RedBlackGamePanel extends cc.Component {
                     _chipJs.chip_recovery(_player, offPos, true, true);
                 }
             }
+            setTimeout(() => {
+                this.setLight(true, 0);
+            }, 700);
         }, 1300);
     }
 
@@ -408,6 +422,7 @@ export default class RedBlackGamePanel extends cc.Component {
     //点击坐下
     onClickDown(event, customEventData) {
         let _seatId = parseInt(customEventData);
+        this._isOncilckDown = true;
         // //红黑幸运一击 下注的下标
         window.RedBlack.RedBlackMsg.sendMsgRequestUserSitDown(_seatId);
     }
@@ -474,7 +489,8 @@ export default class RedBlackGamePanel extends cc.Component {
                     _player = this.players.children[_seatId];
                     _playerJs = _player.getComponent("RedBlackPlayer");
                     // console.warn("_userData[i].SeatId = " + _userData[i].SeatId);
-                    _playerJs.isSelfAni(this._curSeatId != _seatId);
+                    _playerJs.isSelfAni(this._isOncilckDown);
+                    this._isOncilckDown = false;
                     _playerJs.initPlayerData(_userData[i]);
                     this.setPlayerIsDawn(true, _seatId);
                     this._curSeatId = _userData[i].SeatId - 1;
@@ -495,7 +511,7 @@ export default class RedBlackGamePanel extends cc.Component {
     }
 
     //点击下注 
-    onClickBetint(event, customEventData) {
+    onClickBetint(customEventData) {
         //筹码全部置灰的时候 没有初始化 不能点击下注
         if (chipId.length == 0 || !window.RedBlack.RedBlackMsg.isBetingOk) {
             return;
@@ -512,7 +528,7 @@ export default class RedBlackGamePanel extends cc.Component {
         }
         this.setChipButton();
         //this.showBetTing(customEventData);
-        let _areaId = parseInt(customEventData);
+        let _areaId = customEventData;//parseInt(customEventData);
         //红黑幸运一击 下注的下标
         window.RedBlack.RedBlackMsg.sendMsgRequestBetsResult(redBlackLuck[_areaId], this.curSelfChooseChipId);
     }
@@ -546,10 +562,10 @@ export default class RedBlackGamePanel extends cc.Component {
         let _isSelf = _data.UserID == window.playerMng.userId;
         let _goldNum = chipId[_data.BetIndex];
         let _betArea = this.betingArea[_data.BetType];
+        _betArea.getChildByName("lableLayout").active = true;
         if (_isSelf) {
             console.log("self bet = " + JSON.stringify(_data));
             this._isNoBet = true;
-            _betArea.getChildByName("selfBg").active = true;
             this.betAreaDataArr[_data.BetType].selfBet += _goldNum;
             this.betAreaDataArr[_data.BetType].otherBet += _goldNum;
             //自己有下注这一轮就不让i推出游戏
@@ -558,12 +574,10 @@ export default class RedBlackGamePanel extends cc.Component {
             console.log("other bet = " + JSON.stringify(_data));
             this.betAreaDataArr[_data.BetType].otherBet += _goldNum;
         }
-        let _numObj = getChipNum(this.betAreaDataArr[_data.BetType].otherBet, true);
-        _betArea.getChildByName("otherBet").getComponent(cc.Label).string
-            = _numObj.num + _numObj.zi;
-        _numObj = getChipNum(this.betAreaDataArr[_data.BetType].selfBet, true);
-        _betArea.getChildByName("selfBg").getChildByName("selfBet").getComponent(cc.Label).string
-            = "下注：" + _numObj.num + _numObj.zi;
+        let _numObj = getChipNum(this.betAreaDataArr[_data.BetType].selfBet, true);
+        let _numObj1 = getChipNum(this.betAreaDataArr[_data.BetType].otherBet, true);
+        _betArea.getChildByName("lableLayout").getChildByName("selfBet").getComponent(cc.RichText).string = "<color=#fcc400> " + _numObj.num + _numObj.zi + "</c>";
+        _betArea.getChildByName("lableLayout").getChildByName("otherBet").getComponent(cc.RichText).string ="<color=#ffffff>" + _numObj1.num + _numObj1.zi + "/</c>";
 
         let _seatId = _data.SeatId - 1;
         if (_data.SeatId === 0) {
@@ -602,7 +616,7 @@ export default class RedBlackGamePanel extends cc.Component {
             }
             //头像摇晃
             this.playerHeadAni(playerSeatId.player_self);
-            _chipJs = this.getChip(_data.BetIndex,_data.BetType);
+            _chipJs = this.getChip(_data.BetIndex, _data.BetType);
 
             _chipJs.chip_fiy(
                 _playerSelf,
@@ -612,7 +626,7 @@ export default class RedBlackGamePanel extends cc.Component {
                 _data.BetIndex,
             );
             if (_data.SeatId !== 0) {
-                _chipJs = this.getChip(_data.BetIndex,_data.BetType);
+                _chipJs = this.getChip(_data.BetIndex, _data.BetType);
                 _chipJs.chip_fiy(
                     _player,
                     _betArea.getChildByName("betArea"),
@@ -642,7 +656,7 @@ export default class RedBlackGamePanel extends cc.Component {
             //头像摇晃
             this.playerHeadAni(_seatId);
             //其他
-            _chipJs = this.getChip(_data.BetIndex,_data.BetType);
+            _chipJs = this.getChip(_data.BetIndex, _data.BetType);
             _chipJs.chip_fiy(
                 _player,
                 _betArea.getChildByName("betArea"),
@@ -688,6 +702,20 @@ export default class RedBlackGamePanel extends cc.Component {
         return cc.v2(_offX, _offY);
     }
 
+    setLight(isOver, index = 0){
+        this.lights[0].active = isOver;
+        this.lights[1].active = !isOver;
+        if (isOver){
+            for (let i = 0; i < this.lights[0].childrenCount; ++i){
+                this.lights[0].children[i].getComponent(cc.Sprite).spriteFrame = this.lightSps[index];
+            }
+        }
+        if (index === 0){
+            this.lights[0].y = 166;
+        }else{
+            this.lights[0].y = 172;
+        }
+    }
     //开始动画
     StartMovie(StatusTime) {
         // console.log("-------------------111111111111111");
@@ -697,6 +725,7 @@ export default class RedBlackGamePanel extends cc.Component {
         this._betPlayEffectIsOne = true;
 
         window.RedBlack.RedBlackCentrePanel.showAni(showPanelIdType.battleAni);
+        window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.VS), false);
         window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.QianZou), false);
         this.otherTime = setTimeout(() => {
             window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.RuChang), false);
@@ -710,6 +739,7 @@ export default class RedBlackGamePanel extends cc.Component {
             this.dealCards();
             //开始下注动画
             window.RedBlack.RedBlackCentrePanel.showAniDefault(showPanelIdType.startBet);
+            window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.RuChang), false);
             window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.KaisShiXiaZhu), false);
             // }, 300);
 
@@ -828,6 +858,10 @@ export default class RedBlackGamePanel extends cc.Component {
             let _ani = _aniNode.getComponent(cc.Animation);
             let _name = _ani.defaultClip.name;
             _ani.play(_name);
+            let _lizi = _aniNode.getChildByName("HH_paixinglizi");
+            if (_lizi){
+                _lizi.getComponent(cc.ParticleSystem).resetSystem();
+            }
 
             //牌型音效
             !isback && window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(msg.WinCardType), false);
@@ -837,6 +871,10 @@ export default class RedBlackGamePanel extends cc.Component {
             let _ani = _aniNode.getComponent(cc.Animation);
             let _name = _ani.defaultClip.name;
             _ani.play(_name);
+            let _lizi = _aniNode.getChildByName("HH_paixinglizi");
+            if (_lizi){
+                _lizi.getComponent(cc.ParticleSystem).resetSystem();
+            }
             //牌型音效
             !isback && window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(msg.LoseCardType), false);
         }
@@ -848,6 +886,7 @@ export default class RedBlackGamePanel extends cc.Component {
 
         //胜利闪烁
         let _winId = winId[msg.Win];
+        this.setLight(true, _winId + 1);
         let _betArea = this.betingArea[_winId];
         _betArea.getChildByName("winBg").active = true;
         _betArea.getChildByName("winBg").getComponent("RedBlackFlash").flashRepeat(6, 0.3, true);
@@ -858,10 +897,18 @@ export default class RedBlackGamePanel extends cc.Component {
         let _red = this.panelWinOrLoseAnis[3];
         if (_winId === 0) {
             this.panelWinOrLoseAnis[0].active = true;
-            _black.getComponent(sp.Skeleton).setAnimation(1, "honghei_kingwin", false);
+            _black.getComponent(sp.Skeleton).setAnimation(0, "hhxs_heidi_win", false);
+            window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.Win_m), false);
+            setTimeout(() => {
+                _black.getComponent(sp.Skeleton).setAnimation(0, "hhxs_heidi_daiji", true);
+            }, 1700);
         } else {
             this.panelWinOrLoseAnis[2].active = true;
-            _red.getComponent(sp.Skeleton).setAnimation(1, "queen_win", false);
+            _red.getComponent(sp.Skeleton).setAnimation(0, "hhxs_honghou_win", false);
+            window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.Win_w), false);
+            setTimeout(() => {
+                _red.getComponent(sp.Skeleton).setAnimation(0, "hhxs_honghou_daiji", true);
+            }, 2000);
         }
 
         //刷新走势图
@@ -937,14 +984,14 @@ export default class RedBlackGamePanel extends cc.Component {
             let _cardJs = _card.getComponent("RedBlackCard");
             let _characters = _blackPoker[i] >> 4;//Math.floor(_blackPoker / 16);
             let _flowerColor = _blackPoker[i] & 0x0f;
-            // console.warn("_blackPoker characters = " + _characters + "  flowerColor = " + _flowerColor);
+            console.warn("_blackPoker characters = " + _characters + "  flowerColor = " + _flowerColor);
             _cardJs.initCardData(_characters, _flowerColor);
 
             _card = this.cardPanelShow[1].children[i];
             _cardJs = _card.getComponent("RedBlackCard");
             _characters = _redPoker[i] >> 4;//Math.floor(_redPoker[i] / 16);
             _flowerColor = _redPoker[i] & 0x0f;//_redPoker[i] % 16;
-            // console.warn("_redPoker characters = " + _characters + "  flowerColor = " + _flowerColor);
+            console.warn("_redPoker characters = " + _characters + "  flowerColor = " + _flowerColor);
             _cardJs.initCardData(_characters, _flowerColor);
         }
         this.turnCard(0, 0, msg);
@@ -1005,6 +1052,7 @@ export default class RedBlackGamePanel extends cc.Component {
         //自己有下注这一轮就不让i推出游戏
         this._leveOk = true;
         this._curSeatId = -2;
+        this._isOncilckDown = false;
         this.clearAll();
         this.betAreaDataArr[0].selfBet = msg.UserBetBlack;
         this.betAreaDataArr[1].selfBet = msg.UserBetRed;
@@ -1032,15 +1080,13 @@ export default class RedBlackGamePanel extends cc.Component {
 
             let _betArea = this.betingArea[i];
             console.log("i = this.betAreaDataArr[i].selfBet =" + this.betAreaDataArr[i].selfBet);
-            if (this.betAreaDataArr[i].selfBet > 0) {
-                _betArea.getChildByName("selfBg").active = true;
+            if (this.betAreaDataArr[i].selfBet > 0 || this.betAreaDataArr[i].otherBet > 0) {
+                _betArea.getChildByName("lableLayout").active = true;
             }
-            let _numObj = getChipNum(this.betAreaDataArr[i].otherBet, true);
-            _betArea.getChildByName("otherBet").getComponent(cc.Label).string
-                = _numObj.num + _numObj.zi;
-            _numObj = getChipNum(this.betAreaDataArr[i].selfBet, true);
-            _betArea.getChildByName("selfBg").getChildByName("selfBet").getComponent(cc.Label).string
-                = "下注：" + _numObj.num + _numObj.zi;
+            let _numObj = getChipNum(this.betAreaDataArr[i].selfBet, true);
+            let _numObj1 = getChipNum(this.betAreaDataArr[i].otherBet, true);
+            _betArea.getChildByName("lableLayout").getChildByName("selfBet").getComponent(cc.RichText).string = "<color=#fcc400> " + _numObj.num + _numObj.zi + "</c>";
+            _betArea.getChildByName("lableLayout").getChildByName("otherBet").getComponent(cc.RichText).string ="<color=#ffffff>" + _numObj1.num + _numObj1.zi + "/</c>";
         }
     }
 
@@ -1095,12 +1141,12 @@ export default class RedBlackGamePanel extends cc.Component {
         flashNode.getComponent("RedBlackFlash").flash(num, delayTime);
     }
 
-    //胜负图 20
+    //胜负图 22
     refreshTrendChart(arr = [0, 1, 0, 1, 1, 1]) {
         this.trendData[0] = [];
         let _len = arr.length;
-        if (_len > 20) {
-            for (let i = 0; i < 20; ++i) {
+        if (_len > 22) {
+            for (let i = 0; i < 22; ++i) {
                 this.trendData[0].unshift(winId[arr[_len - 1 - i]]);//splice(1, 0, winId[arr[i]]);
             }
         } else {
@@ -1118,12 +1164,12 @@ export default class RedBlackGamePanel extends cc.Component {
         _len > 0 && (this.trendChart.children[_len - 1].getComponent("RedBlackFlash").flash1(3, 0.3, true));
     }
 
-    ////牌型走势图 7
+    ////牌型走势图 12
     refreshCardTypeChart(arr = [1, 1, 2, 3, 4, 5, 6, 6]) {
         this.trendData[1] = [];
         let _len = arr.length;
-        if (_len > 7) {
-            for (let i = 0; i < 7; ++i) {
+        if (_len > 12) {
+            for (let i = 0; i < 12; ++i) {
                 this.trendData[1].unshift(arr[_len - 1 - i]);//splice(1, 0, arr[i]);
             }
         } else {
@@ -1133,35 +1179,35 @@ export default class RedBlackGamePanel extends cc.Component {
         _len = this.trendData[1].length;
         for (let i = 0; i < _len; ++i) {
             let item = cc.instantiate(this.trendChartPre);
-            item.getComponent("RedBlackTrendChartItem").setCardTypeChart(this.trendData[1][i]);
+            item.getComponent("RedBlackTrendChartItem").setCardTypeChart(this.trendData[1][i], 0);
             this.cardTypeChart.addChild(item);
         }
         _len > 0 && (this.cardTypeChart.children[_len - 1].getComponent("RedBlackFlash").flash1(3, 0.3, true));
     }
 
-    //每局刷新胜负图 20 牌型走势图 7 
+    //每局刷新胜负图 22 牌型走势图 12 
     refreshSceneList(trendChartId, cardTypeChartId) {
-        console.log("每局刷新胜负图 20 牌型走势图 7 ");
+        console.log("每局刷新胜负图 22 牌型走势图 12 ");
         let item = cc.instantiate(this.trendChartPre);
         item.getComponent("RedBlackTrendChartItem").setTrendChart(trendChartId);
         this.trendChart.addChild(item);
         let _len = this.trendChart.childrenCount;
-        if (_len > 20) {
+        if (_len > 22) {
             this.trendChart.runAction(cc.sequence(
-                cc.moveBy(0.1, 20, 0),
+                cc.moveBy(0.1, 22, 0),
                 cc.callFunc(() => {
                     this.trendChart.children[0].destroy();
-                    this.trendChart.x = 9.083;
+                    this.trendChart.x = 3;
                 }),
             ));
         }
         this.trendChart.children[_len - 1].getComponent("RedBlackFlash").flash1(3, 0.3, true);
 
         item = cc.instantiate(this.trendChartPre);
-        item.getComponent("RedBlackTrendChartItem").setCardTypeChart(cardTypeChartId);
+        item.getComponent("RedBlackTrendChartItem").setCardTypeChart(cardTypeChartId, 0);
         this.cardTypeChart.addChild(item);
         _len = this.cardTypeChart.childrenCount;
-        if (_len > 7) {
+        if (_len > 12) {
             this.cardTypeChart.runAction(cc.sequence(
                 cc.moveBy(0.1, 10, 0),
                 cc.callFunc(() => {
@@ -1182,38 +1228,49 @@ export default class RedBlackGamePanel extends cc.Component {
     //刷新请下注时间
     refreshBetTime(time = 10000) {
         this.clearTime();
+        this.setLight(false, 0);
         // console.warn("刷新请下注时间");
         let _time = Math.floor(time / 1000);
-        this.betTime.node.active = true;
-        if (_time <= 0) {
-            _time = 0;
+        this.betTime.node.parent.active = true;
+        if (_time >= 10){
+            this.betTime.node.x = -5;
+        }else{
+            this.betTime.node.x = 0;
+        }
+        if (_time <= 1) {
+            _time = 1;
         }
         this.betTime.string = _time + "";
         this.waitTime = setInterval(() => {
-            if (_time > 0) {
+            if (_time > 1) {
                 //倒计时
                 --_time;
                 if (_time <= 5) {
                     window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.daojishi), false);
                 }
-                if (_time === 0) {
+                if (_time === 1) {
                     window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.QianZou), false);
                     setTimeout(() => {
                         window.audioMng.playEffect(window.RedBlack.RedBlackAudioLayer.getAudio(AudioType.RuChang), false);
                     }, 1000);
                 }
             } else {
-                _time = 0;
+                _time = 1;
             }
             // console.warn("_time = " + _time);
             this.betTime.string = _time + "";
+            if (_time >= 10){
+                this.betTime.node.x = -5;
+            }else{
+                this.betTime.node.x = 0;
+            }
         }, 1000);
     }
 
     //清除下注时间
     clearTime() {
         // console.warn("清除下注时间");
-        this.betTime.node.active = false;
+        this.betTime.node.parent.active = false;
         if (this.waitTime != null || this.waitTime != undefined) {
             clearInterval(this.waitTime);
             this.waitTime = null;
@@ -1242,6 +1299,9 @@ export default class RedBlackGamePanel extends cc.Component {
             this.chipLayout.children[i].getChildByName("button").active = true;
         }
         this.setCardBack(true, true);
+        this.choosePanel.active = false;
+        this.choosePanel.scaleY = 0.1;
+        this.chooseBtn.getComponent(cc.Button).interactable = true;
     }
 
     //筹码对象池
@@ -1249,7 +1309,7 @@ export default class RedBlackGamePanel extends cc.Component {
         this.chipPool.put(chip);
     }
 
-    getChip(betIndex:number,eType?:number) {
+    getChip(betIndex: number, eType?: number) {
         let _node: cc.Node = null;
         if (this.chipPool.size() <= 0) {
             for (let i = 0; i < 100; ++i) {
@@ -1265,7 +1325,7 @@ export default class RedBlackGamePanel extends cc.Component {
         _node.stopAllActions();
         let chipJs = _node.getComponent("RedBlackChipItem");
         chipJs.initChipData(betIndex);
-        if(eType != null){
+        if (eType != null) {
             this.betAreaNodeArr[eType].push(_node);
         }
         return chipJs;
@@ -1291,10 +1351,10 @@ export default class RedBlackGamePanel extends cc.Component {
         for (let i = 0; i < this.chipLayout.childrenCount; ++i) {
             let _numObj = getChipNum(chipId[i]);
             let _chip = this.chipLayout.children[i];
-            let _num = cc.find("lableLayout/num", _chip);
+            let _num = cc.find("num", _chip);
             _num.getComponent(cc.Label).string = _numObj.num + _numObj.zi + '';
 
-            _num = cc.find("select/huangse_chouma/lableLayout/num", _chip);
+            _num = cc.find("select/huangse_chouma/num", _chip);
             _num.getComponent(cc.Label).string = _numObj.num + _numObj.zi + '';
         }
     }
@@ -1305,6 +1365,25 @@ export default class RedBlackGamePanel extends cc.Component {
 
     getBetPlayEffect() {
         return !this._betPlayEffect && !this._betPlayEffectIsOne;
+    }
+
+    onClickChoose(event, customEventData){
+        console.warn("onClickChoose");
+        this.choosePanel.active = true;
+        if (this.choosePanel.scaleY === 0.1){
+            this.chooseBtn.getComponent(cc.Button).interactable = false;
+            this.choosePanel.runAction(cc.sequence(cc.scaleTo(0.1, 1, 1),cc.callFunc(()=>{
+                this.choosePanel.scaleY = 1;
+                this.chooseBtn.getComponent(cc.Button).interactable = true;
+            })));
+        }else{
+            this.chooseBtn.getComponent(cc.Button).interactable = false;
+            this.choosePanel.runAction(cc.sequence(cc.scaleTo(0.1, 1, 0.1),cc.callFunc(()=>{
+                this.choosePanel.scaleY = 0.1;
+                this.choosePanel.active = false;
+                this.chooseBtn.getComponent(cc.Button).interactable = true;
+            })));
+        }
     }
 
 }

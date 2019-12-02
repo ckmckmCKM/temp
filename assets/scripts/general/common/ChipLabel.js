@@ -6,6 +6,7 @@ cc.Class({
         string: "",
         others: [cc.String],
         frames: [cc.SpriteFrame],
+        off: cc.v2(0, 0),
     },
 
     setFrame(frame){
@@ -122,8 +123,8 @@ cc.Class({
         let sa=b/sx,ca=d/sy,halfwid=twid*0.5,px=0,py=0;
         for(var i = 0; i < len-1; i++){
             for(var j = 0; j < 4; j++){
-                px = vbuf[offs] - halfwid;
-                py = vbuf[offs + 1];
+                px = vbuf[offs] - halfwid+this.off.x;
+                py = vbuf[offs + 1]+this.off.y;
                 vbuf[offs] = (px-ctx)*ca-(py-cty)*sa+ctx;
                 vbuf[offs+1] = (py-cty)*ca+(px-ctx)*sa+cty;
                 offs += 5;

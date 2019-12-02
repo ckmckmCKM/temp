@@ -1,0 +1,1292 @@
+
+xshh_erji_renwu.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+biyan
+  rotate: false
+  xy: 604, 2
+  size: 74, 34
+  orig: 74, 34
+  offset: 0, 0
+  index: -1
+ershi1
+  rotate: false
+  xy: 332, 125
+  size: 25, 57
+  orig: 25, 57
+  offset: 0, 0
+  index: -1
+lian
+  rotate: false
+  xy: 189, 4
+  size: 141, 173
+  orig: 141, 173
+  offset: 0, 0
+  index: -1
+liuhai4
+  rotate: true
+  xy: 604, 38
+  size: 57, 125
+  orig: 57, 125
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_00
+  rotate: false
+  xy: 275, 245
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_01
+  rotate: true
+  xy: 745, 173
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_02
+  rotate: true
+  xy: 745, 83
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_03
+  rotate: true
+  xy: 332, 7
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_00
+  rotate: false
+  xy: 2, 750
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_01
+  rotate: true
+  xy: 382, 643
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_02
+  rotate: true
+  xy: 2, 370
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_03
+  rotate: false
+  xy: 371, 370
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_04
+  rotate: true
+  xy: 655, 643
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_05
+  rotate: true
+  xy: 751, 263
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_06
+  rotate: false
+  xy: 365, 97
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+toufahou
+  rotate: false
+  xy: 2, 7
+  size: 185, 361
+  orig: 185, 361
+  offset: 0, 0
+  index: -1
+toupibu
+  rotate: true
+  xy: 270, 184
+  size: 59, 74
+  orig: 59, 74
+  offset: 0, 0
+  index: -1
+toushi
+  rotate: true
+  xy: 189, 179
+  size: 100, 79
+  orig: 100, 79
+  offset: 0, 0
+  index: -1
+xiongbu
+  rotate: false
+  xy: 914, 18
+  size: 105, 63
+  orig: 105, 63
+  offset: 0, 0
+  index: -1
+yaodai1
+  rotate: true
+  xy: 275, 617
+  size: 131, 94
+  orig: 131, 94
+  offset: 0, 0
+  index: -1
+yaofeng
+  rotate: true
+  xy: 928, 663
+  size: 142, 90
+  orig: 142, 90
+  offset: 0, 0
+  index: -1
+youru_gai
+  rotate: true
+  xy: 731, 11
+  size: 70, 84
+  orig: 70, 84
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: true
+  xy: 817, 14
+  size: 67, 95
+  orig: 67, 95
+  offset: 0, 0
+  index: -1
+youtui
+  rotate: false
+  xy: 928, 807
+  size: 92, 214
+  orig: 92, 214
+  offset: 0, 0
+  index: -1
+zuoru_gai
+  rotate: true
+  xy: 189, 281
+  size: 87, 84
+  orig: 87, 84
+  offset: 0, 0
+  index: -1
+zuoshou
+  rotate: true
+  xy: 275, 517
+  size: 98, 89
+  orig: 98, 89
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu2.png
+size: 1020,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ershi2
+  rotate: true
+  xy: 2, 20
+  size: 23, 51
+  orig: 23, 51
+  offset: 0, 0
+  index: -1
+liuhai1
+  rotate: false
+  xy: 928, 652
+  size: 58, 98
+  orig: 58, 98
+  offset: 0, 0
+  index: -1
+liuhai2
+  rotate: true
+  xy: 745, 506
+  size: 46, 168
+  orig: 46, 168
+  offset: 0, 0
+  index: -1
+liuhai3
+  rotate: false
+  xy: 203, 252
+  size: 62, 117
+  orig: 62, 117
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_00
+  rotate: false
+  xy: 240, 2
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_04
+  rotate: false
+  xy: 275, 479
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_05
+  rotate: true
+  xy: 745, 554
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_06
+  rotate: true
+  xy: 651, 30
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_07
+  rotate: false
+  xy: 928, 752
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_08
+  rotate: false
+  xy: 928, 282
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_09
+  rotate: false
+  xy: 928, 10
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_07
+  rotate: false
+  xy: 2, 751
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_08
+  rotate: true
+  xy: 382, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_09
+  rotate: true
+  xy: 2, 371
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_10
+  rotate: false
+  xy: 275, 206
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_11
+  rotate: true
+  xy: 655, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_12
+  rotate: true
+  xy: 655, 120
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi4
+  rotate: false
+  xy: 203, 5
+  size: 35, 245
+  orig: 35, 245
+  offset: 0, 0
+  index: -1
+yaodai2
+  rotate: false
+  xy: 2, 45
+  size: 199, 324
+  orig: 199, 324
+  offset: 0, 0
+  index: -1
+youyibai
+  rotate: true
+  xy: 365, 500
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+zuobi
+  rotate: false
+  xy: 537, 60
+  size: 112, 144
+  orig: 112, 144
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu3.png
+size: 1020,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi1/qunzi1_01
+  rotate: false
+  xy: 266, 2
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_10
+  rotate: false
+  xy: 275, 479
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_11
+  rotate: false
+  xy: 176, 99
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_12
+  rotate: true
+  xy: 745, 554
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_13
+  rotate: false
+  xy: 928, 752
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_14
+  rotate: true
+  xy: 563, 30
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_15
+  rotate: false
+  xy: 928, 282
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_16
+  rotate: false
+  xy: 928, 10
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_13
+  rotate: false
+  xy: 2, 751
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_14
+  rotate: true
+  xy: 382, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_15
+  rotate: true
+  xy: 2, 371
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_16
+  rotate: false
+  xy: 275, 206
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_17
+  rotate: true
+  xy: 655, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_18
+  rotate: true
+  xy: 655, 120
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_00
+  rotate: true
+  xy: 365, 500
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+zuoyibai
+  rotate: false
+  xy: 2, 57
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu4.png
+size: 1020,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi1/qunzi1_02
+  rotate: false
+  xy: 266, 2
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_17
+  rotate: false
+  xy: 275, 479
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_18
+  rotate: false
+  xy: 176, 99
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_19
+  rotate: true
+  xy: 745, 554
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_20
+  rotate: false
+  xy: 928, 752
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_21
+  rotate: true
+  xy: 563, 30
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_22
+  rotate: false
+  xy: 928, 282
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_23
+  rotate: false
+  xy: 928, 10
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_19
+  rotate: false
+  xy: 2, 751
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_20
+  rotate: true
+  xy: 382, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_21
+  rotate: true
+  xy: 2, 371
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_22
+  rotate: false
+  xy: 275, 206
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_23
+  rotate: true
+  xy: 655, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_24
+  rotate: true
+  xy: 655, 120
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_01
+  rotate: true
+  xy: 365, 500
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_00
+  rotate: false
+  xy: 2, 57
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu5.png
+size: 1020,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi1/qunzi1_03
+  rotate: false
+  xy: 266, 2
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_04
+  rotate: true
+  xy: 799, 257
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_24
+  rotate: false
+  xy: 275, 479
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_25
+  rotate: false
+  xy: 176, 99
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_26
+  rotate: true
+  xy: 745, 554
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_27
+  rotate: false
+  xy: 928, 752
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_25
+  rotate: false
+  xy: 2, 751
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_26
+  rotate: true
+  xy: 382, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_27
+  rotate: true
+  xy: 2, 371
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_28
+  rotate: false
+  xy: 275, 206
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+qunzi3/qunzi3_29
+  rotate: true
+  xy: 655, 644
+  size: 378, 271
+  orig: 378, 271
+  offset: 0, 0
+  index: -1
+shentiyifu
+  rotate: true
+  xy: 799, 21
+  size: 234, 192
+  orig: 234, 192
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_02
+  rotate: true
+  xy: 365, 500
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_03
+  rotate: false
+  xy: 655, 120
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_01
+  rotate: false
+  xy: 2, 57
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu6.png
+size: 1012,996
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi2/qunzi2_28
+  rotate: true
+  xy: 2, 2
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+qunzi2/qunzi2_29
+  rotate: true
+  xy: 274, 2
+  size: 88, 270
+  orig: 88, 270
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: true
+  xy: 762, 62
+  size: 172, 178
+  orig: 172, 178
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_04
+  rotate: false
+  xy: 2, 616
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_05
+  rotate: false
+  xy: 2, 236
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_06
+  rotate: false
+  xy: 146, 616
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_07
+  rotate: false
+  xy: 146, 236
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_08
+  rotate: false
+  xy: 290, 616
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_09
+  rotate: false
+  xy: 290, 236
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_10
+  rotate: true
+  xy: 2, 92
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_11
+  rotate: false
+  xy: 434, 616
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_12
+  rotate: false
+  xy: 434, 236
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_13
+  rotate: false
+  xy: 578, 616
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_14
+  rotate: false
+  xy: 578, 236
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_15
+  rotate: false
+  xy: 722, 616
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_16
+  rotate: false
+  xy: 722, 236
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_17
+  rotate: true
+  xy: 382, 92
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_18
+  rotate: false
+  xy: 866, 616
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_19
+  rotate: false
+  xy: 866, 236
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu7.png
+size: 1016,1012
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi1/qunzi1_05
+  rotate: false
+  xy: 2, 48
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_06
+  rotate: true
+  xy: 464, 283
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_20
+  rotate: false
+  xy: 2, 632
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_21
+  rotate: false
+  xy: 2, 252
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_22
+  rotate: true
+  xy: 299, 868
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_23
+  rotate: false
+  xy: 146, 632
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_24
+  rotate: false
+  xy: 146, 252
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_25
+  rotate: true
+  xy: 299, 724
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_26
+  rotate: true
+  xy: 299, 580
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_02
+  rotate: true
+  xy: 679, 838
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_03
+  rotate: true
+  xy: 679, 664
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_04
+  rotate: false
+  xy: 290, 266
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_05
+  rotate: true
+  xy: 679, 490
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_06
+  rotate: true
+  xy: 668, 316
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_07
+  rotate: false
+  xy: 668, 2
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_08
+  rotate: false
+  xy: 842, 2
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_09
+  rotate: true
+  xy: 299, 92
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu8.png
+size: 1012,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi1/qunzi1_07
+  rotate: true
+  xy: 762, 719
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_27
+  rotate: true
+  xy: 2, 872
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_28
+  rotate: true
+  xy: 382, 872
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+youyibai/youyibai_29
+  rotate: true
+  xy: 2, 728
+  size: 142, 378
+  orig: 142, 378
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_10
+  rotate: true
+  xy: 382, 698
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_11
+  rotate: true
+  xy: 2, 554
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_12
+  rotate: true
+  xy: 696, 545
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_13
+  rotate: true
+  xy: 316, 524
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_14
+  rotate: true
+  xy: 2, 380
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_15
+  rotate: true
+  xy: 630, 371
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_16
+  rotate: true
+  xy: 316, 350
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_17
+  rotate: true
+  xy: 2, 206
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_18
+  rotate: true
+  xy: 630, 197
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_19
+  rotate: true
+  xy: 316, 176
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_20
+  rotate: true
+  xy: 2, 32
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_21
+  rotate: true
+  xy: 630, 23
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_22
+  rotate: true
+  xy: 316, 2
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu9.png
+size: 1008,1004
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi1/qunzi1_08
+  rotate: true
+  xy: 804, 707
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_09
+  rotate: true
+  xy: 804, 410
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_10
+  rotate: true
+  xy: 176, 113
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_11
+  rotate: false
+  xy: 176, 452
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_12
+  rotate: false
+  xy: 473, 452
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_13
+  rotate: false
+  xy: 380, 248
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_14
+  rotate: false
+  xy: 677, 206
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_15
+  rotate: false
+  xy: 380, 44
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_16
+  rotate: false
+  xy: 677, 2
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_23
+  rotate: false
+  xy: 2, 690
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_24
+  rotate: false
+  xy: 2, 376
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_25
+  rotate: false
+  xy: 2, 62
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_26
+  rotate: true
+  xy: 176, 830
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_27
+  rotate: true
+  xy: 490, 830
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_28
+  rotate: true
+  xy: 176, 656
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+zuoyibai/zuoyibai_29
+  rotate: true
+  xy: 490, 656
+  size: 172, 312
+  orig: 172, 312
+  offset: 0, 0
+  index: -1
+
+xshh_erji_renwu10.png
+size: 1004,912
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qunzi1/qunzi1_17
+  rotate: false
+  xy: 2, 707
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_18
+  rotate: true
+  xy: 299, 614
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_19
+  rotate: true
+  xy: 2, 410
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_20
+  rotate: false
+  xy: 206, 410
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_21
+  rotate: true
+  xy: 503, 614
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_22
+  rotate: true
+  xy: 503, 317
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_23
+  rotate: false
+  xy: 2, 206
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_24
+  rotate: true
+  xy: 299, 113
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_25
+  rotate: false
+  xy: 2, 2
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_26
+  rotate: false
+  xy: 503, 113
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_27
+  rotate: true
+  xy: 707, 614
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_28
+  rotate: false
+  xy: 707, 410
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1
+qunzi1/qunzi1_29
+  rotate: true
+  xy: 800, 113
+  size: 295, 202
+  orig: 295, 202
+  offset: 0, 0
+  index: -1

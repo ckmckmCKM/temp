@@ -47,8 +47,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 26,
-      "height": 26
+      "width": 27,
+      "height": 27
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -110,8 +110,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 62,
-      "height": 30
+      "width": 36,
+      "height": 17
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -179,7 +179,7 @@
     "asset": {
       "__uuid__": "bcd8c28e-301d-45b6-98bb-78ce5d061892"
     },
-    "fileId": "dfIv1mGkVPZKi4benCEh34",
+    "fileId": "26m85rp0RJ5o1dCyuLkeK/",
     "sync": false
   },
   {
@@ -194,10 +194,10 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "7dce0454-f1b1-4381-ae4c-6606a379f617"
+      "__uuid__": "a6657229-2cf0-49c1-9051-6cbe7a26decd"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 2,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -223,62 +223,65 @@
     },
     "trendChart": [
       {
-        "__uuid__": "7dce0454-f1b1-4381-ae4c-6606a379f617"
+        "__uuid__": "a6657229-2cf0-49c1-9051-6cbe7a26decd"
       },
       {
-        "__uuid__": "282d2ad3-f292-4acb-9ef6-313965f193e2"
+        "__uuid__": "66124b73-8df5-4b9e-aa71-502d62dd1185"
       }
     ],
     "CardTypeChartBg": [
       {
-        "__uuid__": "3af300cc-35bb-4125-bb0e-45e7bf0b75cf"
+        "__uuid__": "910a66f3-3a5c-4a47-abda-ad0a4ef67b10"
       },
       {
-        "__uuid__": "800f5b4a-40b2-40e8-b551-268416fd874a"
+        "__uuid__": "cf8cc5bf-53b7-4fbd-a905-c12467493d35"
+      },
+      {
+        "__uuid__": "5c583d10-cd70-4db2-b9e0-3aeb18e831a6"
       }
     ],
     "CardTypeChartZi": [
       {
-        "__uuid__": "3fdc9738-0183-4f37-8202-622dc5a14220"
+        "__uuid__": "8636ca09-407f-4f99-abbb-a2a497200f3e"
       },
       {
-        "__uuid__": "addebfb1-09a6-456d-b1bb-4ea19da7344c"
+        "__uuid__": "b73ccd61-b06f-4419-a938-f54f3d9171ce"
       },
       {
-        "__uuid__": "95317545-30f1-432a-b4eb-7dbe217e150b"
+        "__uuid__": "0e63a0aa-99f7-4bb4-ae23-e965bddbb232"
       },
       {
-        "__uuid__": "134bfb93-3520-4cd6-9ed9-064b677618da"
+        "__uuid__": "60cefbf4-8c02-43b6-af30-893198d8222d"
       },
       {
-        "__uuid__": "203b151b-5bfe-490c-a929-f22ba131f329"
+        "__uuid__": "2304de4d-cfb2-404c-b49a-2a8941c1156a"
       },
       {
-        "__uuid__": "95fad263-314c-4fc0-bf26-3f058588de12"
+        "__uuid__": "7e58dd04-523e-4223-ac5c-73f6e38e624f"
       }
     ],
     "CardBrandRoad": [
       {
-        "__uuid__": "673f916c-4d09-48e9-b2ee-2cd311b58959"
+        "__uuid__": "ffb65436-87c3-41f7-8259-ce8544e19b93"
       },
       {
-        "__uuid__": "fb7efffa-b0dd-4cd6-852f-dfc6c7d87672"
+        "__uuid__": "11d53547-f9de-4cf0-88ca-a97222c17196"
       }
     ],
     "trendChart1": [
       {
-        "__uuid__": "5339c6cc-1585-4d65-989f-56f6ad4124a3"
+        "__uuid__": "a6657229-2cf0-49c1-9051-6cbe7a26decd"
       },
       {
-        "__uuid__": "de97e7f3-028b-4aff-b212-94a652a323fa"
+        "__uuid__": "66124b73-8df5-4b9e-aa71-502d62dd1185"
       }
     ],
     "CardBrandRoadTable": [
       {
-        "__uuid__": "adfa45b8-ef6f-423b-87e4-77e99841d112"
+        "__uuid__": "ffb65436-87c3-41f7-8259-ce8544e19b93"
       },
       {
-        "__uuid__": "f33d6309-f39a-4a08-aeab-7ee337389e68"
+        "__uuid__": "11d53547-f9de-4cf0-88ca-a97222c17196"
       }
     ],
     "_id": ""

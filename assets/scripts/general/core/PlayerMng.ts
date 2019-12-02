@@ -31,12 +31,12 @@ class PlayerMng
     }
 
     connect(){
-        /** 以下代码是打包使用 */
-        let url = window.location.search;
-        let host = url.match(/ip=([^&]+)/)[1].split(":");
-        gameTcp.connect(host[0],Number(host[1]),this.uuid);
-        /** 以下代码是开发使用 */
-        // gameTcp.connect("192.168.0.174",6037,this.uuid);
+        // /** 以下代码是打包使用 */
+        // let url = window.location.search;
+        // let host = url.match(/ip=([^&]+)/)[1].split(":");
+        // gameTcp.connect(host[0],Number(host[1]),this.uuid);
+        // /** 以下代码是开发使用 */
+        gameTcp.connect("192.168.0.46",6007,this.uuid);
     }
     
     //获得配置消息
